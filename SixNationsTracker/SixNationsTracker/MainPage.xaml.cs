@@ -20,5 +20,34 @@ namespace SixNationsTracker
             this.InitializeComponent();
         }
 
+        private void tb1_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(IrelandPage));
+        }
+
+        private void tb2_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ScotlandPage));
+        }
+
+        private void tb3_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(EnglandPage));
+        }
+
+        private void tb4_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FrancePage));
+        }
+
+        private void tb5_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(WalesPage));
+        }
+
+        private void tb6_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ItalyPage));
+        }
     }
 }

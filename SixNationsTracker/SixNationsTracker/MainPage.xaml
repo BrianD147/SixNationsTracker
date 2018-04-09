@@ -43,16 +43,16 @@
                         <ImageBrush ImageSource="Images/ScotlandLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="tb2" Grid.Row="0" Grid.Column="2" Tapped="tb1_Tapped" />
+                <TextBlock x:Name="tb2" Grid.Row="0" Grid.Column="2" Tapped="tb2_Tapped" />
 
-                <!-- Enlgand Logo-->
+                <!-- England Logo-->
                 <Rectangle x:Name="rect3Background" Stroke="Black" Grid.Row="0" Grid.Column="4" Fill="White" RadiusX="10" RadiusY="10"/>
                 <Rectangle x:Name="rect3Image" Grid.Row="0" Grid.Column="4" Margin="5, 5, 5, 5">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/EnglandLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="tb3" Grid.Row="0" Grid.Column="4" Tapped="tb1_Tapped" />
+                <TextBlock x:Name="tb3" Grid.Row="0" Grid.Column="4" Tapped="tb3_Tapped" />
 
                 <!-- France Logo-->
                 <Rectangle x:Name="rect4Background" Stroke="Black" Grid.Row="2" Fill="#004786" RadiusX="10" RadiusY="10"/>
@@ -61,7 +61,7 @@
                         <ImageBrush ImageSource="Images/FranceLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="tb4" Grid.Row="2" Tapped="tb1_Tapped" />
+                <TextBlock x:Name="tb4" Grid.Row="2" Tapped="tb4_Tapped" />
 
                 <!-- Wales Logo-->
                 <Rectangle x:Name="rect5Background" Stroke="Black" Grid.Row="2" Grid.Column="2" Fill="#ee2922" RadiusX="10" RadiusY="10"/>
@@ -70,7 +70,7 @@
                         <ImageBrush ImageSource="Images/WalesLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="tb5" Grid.Row="2" Grid.Column="2" Tapped="tb1_Tapped" />
+                <TextBlock x:Name="tb5" Grid.Row="2" Grid.Column="2" Tapped="tb5_Tapped" />
 
                 <!-- Italy Logo-->
                 <Rectangle x:Name="rect6Background" Stroke="Black" Grid.Row="2" Grid.Column="4" Fill="#1f4fa2" RadiusX="10" RadiusY="10"/>
@@ -79,7 +79,7 @@
                         <ImageBrush ImageSource="Images/ItalyLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBlock x:Name="tb6" Grid.Row="2" Grid.Column="4" Tapped="tb1_Tapped" />
+                <TextBlock x:Name="tb6" Grid.Row="2" Grid.Column="4" Tapped="tb6_Tapped" />
             </Grid>
         </Viewbox>
     </Grid>
