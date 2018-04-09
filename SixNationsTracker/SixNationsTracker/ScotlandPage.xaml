@@ -10,5 +10,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="#044d85"/>
         <TextBlock x:Name="tblHeader" Text="S C O T L A N D" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
+        <Rectangle x:Name="rectReturnBackground" Margin="5, 5, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Fill="Black" Opacity=".5" RadiusX="5" RadiusY="5" />
+        <TextBlock x:Name="tbReturn" FontSize="28" Padding="20, 0, 0, 0" Margin="5, 4, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Foreground="White" Tapped="TbReturn_Tapped">
+           &lt;
+        </TextBlock>
     </Grid>
 </Page>

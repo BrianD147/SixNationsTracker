@@ -27,5 +27,9 @@ namespace SixNationsTracker
             this.InitializeComponent();
         }
 
+        private void TbReturn_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }
