@@ -7,7 +7,81 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Grid x:Name = "rootGrid" Background="DarkViolet">
+        <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="Purple"/>
+        <TextBlock x:Name="tblHeader" Text="S I X  N A T I O N S" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
+
+        <Viewbox x:Name="vbMain" Stretch="Uniform" HorizontalAlignment="Center" Margin="20, 70, 20, 20">
+            <Grid Height="200" Width="400">
+                <Grid.RowDefinitions>   
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Ireland Logo-->
+                <Rectangle x:Name="rect1Background" Stroke="Black" Grid.Row="0" Fill="#006946" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect1Image" Grid.Row="0" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/IrelandLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb1" Grid.Row="0" Tapped="tb1_Tapped" />
+
+                <!-- Scotland Logo-->
+                <Rectangle x:Name="rect2Background" Stroke="Black" Grid.Row="0" Grid.Column="2" Fill="#044d85" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect2Image" Grid.Row="0" Grid.Column="2" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/ScotlandLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb2" Grid.Row="0" Grid.Column="2" Tapped="tb1_Tapped" />
+
+                <!-- Enlgand Logo-->
+                <Rectangle x:Name="rect3Background" Stroke="Black" Grid.Row="0" Grid.Column="4" Fill="White" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect3Image" Grid.Row="0" Grid.Column="4" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/EnglandLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb3" Grid.Row="0" Grid.Column="4" Tapped="tb1_Tapped" />
+
+                <!-- France Logo-->
+                <Rectangle x:Name="rect4Background" Stroke="Black" Grid.Row="2" Fill="#004786" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect4Image" Grid.Row="2" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/FranceLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb4" Grid.Row="2" Tapped="tb1_Tapped" />
+
+                <!-- Wales Logo-->
+                <Rectangle x:Name="rect5Background" Stroke="Black" Grid.Row="2" Grid.Column="2" Fill="#ee2922" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect5Image" Grid.Row="2" Grid.Column="2" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/WalesLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb5" Grid.Row="2" Grid.Column="2" Tapped="tb1_Tapped" />
+
+                <!-- Italy Logo-->
+                <Rectangle x:Name="rect6Background" Stroke="Black" Grid.Row="2" Grid.Column="4" Fill="#1f4fa2" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rect6Image" Grid.Row="2" Grid.Column="4" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Images/ItalyLogo.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock x:Name="tb6" Grid.Row="2" Grid.Column="4" Tapped="tb1_Tapped" />
+            </Grid>
+        </Viewbox>
     </Grid>
+
 </Page>
