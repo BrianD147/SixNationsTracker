@@ -98,6 +98,9 @@
     <Compile Include="EnglandPage.xaml.cs">
       <DependentUpon>EnglandPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FixturesPage.xaml.cs">
+      <DependentUpon>FixturesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrancePage.xaml.cs">
       <DependentUpon>FrancePage.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="EnglandPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FixturesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

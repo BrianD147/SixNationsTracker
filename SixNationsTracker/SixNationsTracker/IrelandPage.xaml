@@ -14,5 +14,29 @@
         <TextBlock x:Name="tbReturn" FontSize="28" Padding="20, 0, 0, 0" Margin="5, 4, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Foreground="White" Tapped="TbReturn_Tapped">
             &lt;
         </TextBlock>
+
+        <Viewbox x:Name="vbMain" Stretch="Uniform" HorizontalAlignment="Center" Margin="20, 70, 20, 20">
+            <Grid Height="200" Width="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="2.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="tbManager" Grid.Column="0" FontSize="6" Text="Manager Image"/>
+                <TextBlock x:Name="tbManagerDesc" Grid.Column="0" Grid.Row="2" FontSize="6" Text="Manager Description"/>
+
+                <TextBlock x:Name="tbCentralText" Grid.Column="2" FontSize="6" Text="Textblock 1"/>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>

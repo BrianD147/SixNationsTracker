@@ -49,5 +49,10 @@ namespace SixNationsTracker
         {
             Frame.Navigate(typeof(ItalyPage));
         }
+
+        private void tb7_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FixturesPage));
+        }
     }
 }
