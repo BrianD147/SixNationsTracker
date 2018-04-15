@@ -35,7 +35,7 @@
                 <TextBlock x:Name="tbManager" Grid.Column="0" FontSize="6" Text="Manager Image"/>
                 <TextBlock x:Name="tbManagerDesc" Grid.Column="0" Grid.Row="2" FontSize="6" Text="Manager Description"/>
 
-                <TextBlock x:Name="tbCentralText" Grid.Column="2" FontSize="6" Text="Textblock 1"/>
+                <ListView x:Name="lvCenter" Grid.Column="2" ItemsSource="{Binding}"/>
             </Grid>
         </Viewbox>
     </Grid>

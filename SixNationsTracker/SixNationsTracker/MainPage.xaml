@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-
     <Grid x:Name = "rootGrid" Background="White">
         <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="MediumPurple" Stroke="Black" StrokeThickness="0.4"/>
         <TextBlock x:Name="tblHeader" Text="S I X  N A T I O N S" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
