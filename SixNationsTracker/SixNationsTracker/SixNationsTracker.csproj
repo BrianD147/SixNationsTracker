@@ -113,10 +113,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NeoConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScotlandPage.xaml.cs">
       <DependentUpon>ScotlandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeamPage.xaml.cs">
+      <DependentUpon>TeamPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WalesPage.xaml.cs">
       <DependentUpon>WalesPage.xaml</DependentUpon>
@@ -174,6 +176,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ScotlandPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

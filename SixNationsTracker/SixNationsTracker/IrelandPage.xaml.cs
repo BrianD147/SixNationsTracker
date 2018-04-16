@@ -37,12 +37,23 @@ namespace SixNationsTracker
             var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "Rubydoy14");
             client.Connect();
 
-            IEnumerable<string> results = client.Cypher
-            .Match("(p:Person)-[:ACTED_IN]->(m:Movie {title: 'Top Gun'})")
+            IEnumerable<string> players = client.Cypher
+            .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
             .Return<string>("p.name").Results;
 
-            lvCenter.ItemsSource = results;
+            lvPlayers.ItemsSource = players;
 
+            IEnumerable<string> coach = client.Cypher
+           .Match("(p:Person)-[:COACHS]->(m:Team {name: 'Ireland'})")
+           .Return<string>("p.name").Results;
+
+            //tbCoach.Text = coach;
+
+            IEnumerable<string> grounds = client.Cypher
+           .Match("(p:Grounds)-[:GROUNDS_OF]->(m:Team {name: 'Ireland'})")
+           .Return<string>("p.name").Results;
+
+            //tbGrounds.Text = grounds;
         }
 
         private void TbReturn_Tapped(object sender, TappedRoutedEventArgs e)

@@ -22,32 +22,32 @@ namespace SixNationsTracker
 
         private void tb1_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(IrelandPage));
+            Frame.Navigate(typeof(TeamPage), 1);
         }
 
         private void tb2_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ScotlandPage));
+            Frame.Navigate(typeof(TeamPage), 2);
         }
 
         private void tb3_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(EnglandPage));
+            Frame.Navigate(typeof(TeamPage), 3);
         }
 
         private void tb4_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(FrancePage));
+            Frame.Navigate(typeof(TeamPage), 4);
         }
 
         private void tb5_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(WalesPage));
+            Frame.Navigate(typeof(TeamPage), 5);
         }
 
         private void tb6_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ItalyPage));
+            Frame.Navigate(typeof(TeamPage), 6);
         }
 
         private void tb7_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
