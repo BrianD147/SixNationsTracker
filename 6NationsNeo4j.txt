@@ -1,0 +1,30 @@
+CREATE (Ireland:Team {name:'Ireland', coach:'Joe Schmidt', captain:'Rory Best'})
+CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10})
+CREATE (RBest:Person {name:'Rory Best', caps:60, points:20})
+CREATE (JCarbery:Person {name:'Joey Carbery', caps:4, points:10})
+CREATE (JConan:Person {name:'Jack Conan', caps:2, points:0})
+CREATE (AConway:Person {name:'Andrew Conway', caps:1, points:0})
+CREATE (JCronin:Person {name:'James Cronin', caps:2, points:0})
+CREATE (SCronin:Person {name:'Sean Cronin', caps:30, points:15})
+CREATE (UDillane:Person {name:'Ultan Dillane', caps:5, points:0})
+CREATE (KEarls:Person {name:'Keith Earls', caps:33, points:45})
+CREATE (CFarrell:Person {name:'Chris Farrell', caps:1, points:0})
+CREATE (TFurlong:Person {name:'Tadhg Furlong', caps:11, points:0})
+CREATE (CHealy:Person {name:'Cian Healy', caps:40, points:15})
+CREATE (JSchmidt:Person {name:'Joe Schmidt', years_coached:5})
+CREATE (Aviva:Grounds {name:'Aviva Stadium', opened:'May 14 2010', capacity:51700})
+CREATE
+  (BAki)-[:PLAYS_FOR]->(Ireland),
+  (RBest)-[:PLAYS_FOR]->(Ireland),
+  (JCarbery)-[:PLAYS_FOR]->(Ireland),
+  (JConan)-[:PLAYS_FOR]->(Ireland),
+  (AConway)-[:PLAYS_FOR]->(Ireland),
+  (JCronin)-[:PLAYS_FOR]->(Ireland),
+  (SCronin)-[:PLAYS_FOR]->(Ireland),
+  (UDillane)-[:PLAYS_FOR]->(Ireland),  
+  (KEarls)-[:PLAYS_FOR]->(Ireland),
+  (CFarrell)-[:PLAYS_FOR]->(Ireland),
+  (TFurlong)-[:PLAYS_FOR]->(Ireland),
+  (CHealy)-[:PLAYS_FOR]->(Ireland),
+  (JSchmidt)-[:COACHS]->(Ireland),
+  (Aviva)-[:GROUNDS_OF]->(Ireland)
