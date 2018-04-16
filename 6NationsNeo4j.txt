@@ -130,7 +130,7 @@ CREATE (RTaofifenua:Person {name:'Romain Taofifenua', caps:8, points:5, position
 CREATE (MTauleigne:Person {name:'Marco Tauleigne', caps:5, points:0, position:'Back Row'})
 CREATE (TThomas:Person {name:'Teddy Thomas', caps:5, points:15, position:'Winger'})
 CREATE (CTolofua:Person {name:'Christopher Tolofua', caps:3, points:0, position:'Hooker'})
-CREATE (FTrinh-Duc:Person {name:'Fracois Trinh-Duc', caps:36, points:23, position:'Fly Half'})
+CREATE (FTrinhDuc:Person {name:'Fracois Trinh-Duc', caps:36, points:23, position:'Fly Half'})
 CREATE (SVahaamahina:Person {name:'Sebastien Vahaamahina', caps:16, points:0, position:'Lock'})
 CREATE (VVakatawa:Person {name:'Virimi Vakatawa', caps:11, points:10, position:'Winger'})
 
@@ -181,7 +181,7 @@ CREATE
 	(MTauleigne)-[:PLAYS_FOR]->(France),
 	(TThomas)-[:PLAYS_FOR]->(France),
 	(CTolofua)-[:PLAYS_FOR]->(France),
-	(FTrinh-Duc)-[:PLAYS_FOR]->(France),
+	(FTrinhDuc)-[:PLAYS_FOR]->(France),
 	(SVahaamahina)-[:PLAYS_FOR]->(France),
 	(VVakatawa)-[:PLAYS_FOR]->(France),
 	(JBrunel)-[:COACHS]->(France),
@@ -223,7 +223,7 @@ CREATE (SMcInally:Person {name:'Stuart McInally', caps:10, points:0, position:'H
 CREATE (WNel:Person {name:'WP Nel', caps:8, points:0, position:'Prop'})
 CREATE (APrice:Person {name:'Ali Price', caps:9, points:0, position:'Scrum Half'})
 CREATE (HPyrgos:Person {name:'Henry Pyrgos', caps:6, points:0, position:'Scrum Half'})
-CREATE (DRae:Person {name:'D'arcy Rae', caps:0, points:0, position:'Prop'})
+CREATE (DRae:Person {name:'Darcy Rae', caps:0, points:0, position:'Prop'})
 CREATE (GReid:Person {name:'Gordon Reid', caps:14, points:5, position:'Prop'})
 CREATE (FRussell:Person {name:'Finn Russell', caps:18, points:54, position:'Fly Half'})
 CREATE (TSeymour:Person {name:'Tommy Seymour', caps:21, points:25, position:'Winger'})
@@ -490,9 +490,9 @@ CREATE (RJones:Person {name:'Rhodri Jones', caps:6, points:0, position:'Prop'})
 CREATE (WJones:Person {name:'Wyn Jones', caps:3, points:0, position:'Prop'})
 CREATE (SLee:Person {name:'Samson Lee', caps:17, points:0, position:'Prop'})
 CREATE (DLewis:Person {name:'Dillon Lewis', caps:0, points:0, position:'Prop'})
-CREATE (RMoriarty:Person {name:'Ross Moriarty', caps:,9 points:10, position:'Back Row'})
+CREATE (RMoriarty:Person {name:'Ross Moriarty', caps:9, points:10, position:'Back Row'})
 CREATE (JNavidi:Person {name:'Josh Navidi', caps:4, points:0, position:'Back Row'})
-CREATE (GNorth:Person {name:'George North', caps:32, points:85, position:'Winger})
+CREATE (GNorth:Person {name:'George North', caps:32, points:85, position:'Winger'})
 CREATE (KOwens:Person {name:'Ken Owens', caps:30, points:0, position:'Hooker'})
 CREATE (HParkes:Person {name:'Hadleigh Parkes', caps:5, points:5, position:'Centre'})
 CREATE (RPatchell:Person {name:'Rhys Patchell', caps:3, points:3, position:'Fly Half'})
@@ -550,4 +550,4 @@ CREATE
   (SWilliams)-[:PLAYS_FOR]->(Wales),
   (TWilliams)-[:PLAYS_FOR]->(Wales),
   (WGatland)-[:COACHS]->(Wales),
-  (Principality)-[:GROUNDS_OF]->(Wales),
+  (Principality)-[:GROUNDS_OF]->(Wales)
