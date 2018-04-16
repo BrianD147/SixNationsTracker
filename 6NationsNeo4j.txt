@@ -1,16 +1,44 @@
 CREATE (Ireland:Team {name:'Ireland', coach:'Joe Schmidt', captain:'Rory Best'})
-CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10})
-CREATE (RBest:Person {name:'Rory Best', caps:60, points:20})
-CREATE (JCarbery:Person {name:'Joey Carbery', caps:4, points:10})
-CREATE (JConan:Person {name:'Jack Conan', caps:2, points:0})
-CREATE (AConway:Person {name:'Andrew Conway', caps:1, points:0})
-CREATE (JCronin:Person {name:'James Cronin', caps:2, points:0})
-CREATE (SCronin:Person {name:'Sean Cronin', caps:30, points:15})
-CREATE (UDillane:Person {name:'Ultan Dillane', caps:5, points:0})
-CREATE (KEarls:Person {name:'Keith Earls', caps:33, points:45})
-CREATE (CFarrell:Person {name:'Chris Farrell', caps:1, points:0})
-CREATE (TFurlong:Person {name:'Tadhg Furlong', caps:11, points:0})
-CREATE (CHealy:Person {name:'Cian Healy', caps:40, points:15})
+
+CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10, position:'Center'})
+CREATE (RBest:Person {name:'Rory Best', caps:60, points:20, position:'Hooker'})
+CREATE (JCarbery:Person {name:'Joey Carbery', caps:4, points:10, position:'Fly Half'})
+CREATE (JConan:Person {name:'Jack Conan', caps:2, points:0, position:'No. 8'})
+CREATE (AConway:Person {name:'Andrew Conway', caps:1, points:0, position:'Winger'})
+CREATE (JCronin:Person {name:'James Cronin', caps:2, points:0, position:'Prop'})
+CREATE (SCronin:Person {name:'Sean Cronin', caps:30, points:15, position:'Hooker'})
+CREATE (UDillane:Person {name:'Ultan Dillane', caps:5, points:0, position:'Lock'})
+CREATE (KEarls:Person {name:'Keith Earls', caps:33, points:45, position:'Center'})
+CREATE (CFarrell:Person {name:'Chris Farrell', caps:1, points:0, position:'Center'})
+CREATE (TFurlong:Person {name:'Tadhg Furlong', caps:11, points:0, position:'Prop'})
+CREATE (CHealy:Person {name:'Cian Healy', caps:40, points:15, position:'Prop'})
+CREATE (IHenderson:Person {name:'Iain Henderson', caps:20, points:10, position:'Lock'})
+CREATE (RHenshaw:Person {name:'Robbie Henshaw', caps:17, points:15, position:'Center'})
+CREATE (RHerring:Person {name:'Rob Herring', caps:0, points:0, position:'Hooker'})
+CREATE (RKearney:Person {name:'Rob Kearney', caps:45, points:22, position:'Full Back'})
+CREATE (IKeatley:Person {name:'Ian Keatley', caps:2, points:14, position:'Fly Half'})
+CREATE (DKilcoyne:Person {name:'Dave Kilcoyne', caps:4, points:0, position:'Prop'})
+CREATE (JLarmour:Person {name:'Jordan Larmour', caps:3, points:0, position:'Winger'})
+CREATE (DLeavy:Person {name:'Dan Leavy', caps:6, points:5, position:'Back Row'})
+CREATE (KMarmion:Person {name:'Kieran Marmion', caps:8, points:0, position:'Scrum Half'})
+CREATE (FMcFadden:Person {name:'Fergus McFadden', caps:18, points:20, position:'Center'})
+CREATE (JMcGrath:Person {name:'Jack McGrath', caps:25, points:10, position:'Prop'})
+CREATE (LMcGrath:Person {name:'Luke McGrath', caps:1, points:0, position:'Scrum Half'})
+CREATE (JMurphy:Person {name:'Jordi Murphy', caps:9, points:0, position:'Back Row'})
+CREATE (CMurray:Person {name:'Conor Murray', caps:32, points:41, position:'Scrum Half'})
+CREATE (POmahony:Person {name:'Peter OMahony', caps:26, points:0, position:'Flanker'})
+CREATE (APorter:Person {name:'Andrew Porter', caps:4, points:0, position:'Prop'})
+CREATE (GRingrose:Person {name:'Garry Ringrose', caps:7, points:10, position:'Center'})
+CREATE (QRoux:Person {name:'Quinn Roux', caps:2, points:0, position:'Lock'})
+CREATE (JRyan1:Person {name:'James Ryan', caps:4, points:0, position:'Lock'})
+CREATE (JRyan2:Person {name:'John Ryan', caps:7, points:0, position:'Prop'})
+CREATE (RScannell:Person {name:'Rory Scannell', caps:0, points:0, position:'Center'})
+CREATE (JSexton:Person {name:'Johnny Sexton', caps:38, points:357, position:'Fly Half'})
+CREATE (CJStander:Person {name:'CJ Stander', caps:15, points:30, position:'Back Row'})
+CREATE (JStockdale:Person {name:'Jacob Stockdale', caps:5, points:35, position:'Utility Back'})
+CREATE (DToner:Person {name:'Devin Toner', caps:27, points:5, position:'Lock'})
+CREATE (JVDFlier:Person {name:'Josh van der Flier', caps:5, points:0, position:'Flanker'})
+
 CREATE (JSchmidt:Person {name:'Joe Schmidt', years_coached:5})
 CREATE (Aviva:Grounds {name:'Aviva Stadium', opened:'May 14 2010', capacity:51700})
 CREATE
@@ -26,9 +54,38 @@ CREATE
   (CFarrell)-[:PLAYS_FOR]->(Ireland),
   (TFurlong)-[:PLAYS_FOR]->(Ireland),
   (CHealy)-[:PLAYS_FOR]->(Ireland),
+  (IHenderson)-[:PLAYS_FOR]->(Ireland),
+  (RHenshaw)-[:PLAYS_FOR]->(Ireland),
+  (RHerring)-[:PLAYS_FOR]->(Ireland),
+  (RKearney)-[:PLAYS_FOR]->(Ireland),
+  (IKeatley)-[:PLAYS_FOR]->(Ireland),
+  (DKilcoyne)-[:PLAYS_FOR]->(Ireland),
+  (JLarmour)-[:PLAYS_FOR]->(Ireland),
+  (DLeavy)-[:PLAYS_FOR]->(Ireland),  
+  (KMarmion)-[:PLAYS_FOR]->(Ireland),
+  (FMcFadden)-[:PLAYS_FOR]->(Ireland),
+  (JMcGrath)-[:PLAYS_FOR]->(Ireland),
+  (LMcGrath)-[:PLAYS_FOR]->(Ireland),
+  (JMurphy)-[:PLAYS_FOR]->(Ireland),
+  (CMurray)-[:PLAYS_FOR]->(Ireland),
+  (POmahony)-[:PLAYS_FOR]->(Ireland),
+  (APorter)-[:PLAYS_FOR]->(Ireland),
+  (GRingrose)-[:PLAYS_FOR]->(Ireland),
+  (QRoux)-[:PLAYS_FOR]->(Ireland),
+  (JRyan1)-[:PLAYS_FOR]->(Ireland),
+  (JRyan2)-[:PLAYS_FOR]->(Ireland),  
+  (RScannell)-[:PLAYS_FOR]->(Ireland),
+  (JSexton)-[:PLAYS_FOR]->(Ireland),
+  (CJStander)-[:PLAYS_FOR]->(Ireland),
+  (JStockdale)-[:PLAYS_FOR]->(Ireland),
+  (DToner)-[:PLAYS_FOR]->(Ireland),
+  (JVDFlier)-[:PLAYS_FOR]->(Ireland),
   (JSchmidt)-[:COACHS]->(Ireland),
   (Aviva)-[:GROUNDS_OF]->(Ireland)
+  
+  
 CREATE (France:Team {name:'France', coach:'Jacques Brunel', captain:'Guilhem Guirado'})
+
 CREATE (MBabillot:Person {name:'Mathieu Babillot', caps:1, points:0, position:'Back Row'})
 CREATE (MBastareaud:Person {name:'Mathieu Bastareaud', caps:26, points:20, position:'Centre'})
 CREATE (LBeauxis:Person {name:'Lionel Beauxis', caps:16, points:70, position:'Fly Half'})
@@ -76,6 +133,7 @@ CREATE (CTolofua:Person {name:'Christopher Tolofua', caps:3, points:0, position:
 CREATE (FTrinh-Duc:Person {name:'Fracois Trinh-Duc', caps:36, points:23, position:'Fly Half'})
 CREATE (SVahaamahina:Person {name:'Sebastien Vahaamahina', caps:16, points:0, position:'Lock'})
 CREATE (VVakatawa:Person {name:'Virimi Vakatawa', caps:11, points:10, position:'Winger'})
+
 CREATE (JBrunel:Person {name:'Jacques Brunel', years_coached:2})
 CREATE (Stade:Grounds {name:'Stade de France', opened:'January 28, 1998', capacity:81338})
 CREATE
@@ -126,11 +184,12 @@ CREATE
 	(FTrinh-Duc)-[:PLAYS_FOR]->(France),
 	(SVahaamahina)-[:PLAYS_FOR]->(France),
 	(VVakatawa)-[:PLAYS_FOR]->(France),
-	(JBrunel)-[:COACHS]->(Ireland),
-	(Stade)-[:GROUNDS_OF]->(Ireland)
+	(JBrunel)-[:COACHS]->(France),
+	(Stade)-[:GROUNDS_OF]->(France)
+	
+	
 CREATE (Scotland:Team {name:'Scotland', coach:'Gregor Townsend', captain:'Barclay Watson'})
-CREATE (GTownsend:Person {name:'Gregor Townsend', years_coached:1})
-CREATE (Murrayfield:Grounds {name:'Murrayfield', opened:'March 21 1925', capacity:67144})
+
 CREATE (JBarclay:Person {name:'John Barclay', caps:36, points:15, position:'Back Row'})
 CREATE (MBennet:Person {name:'Mark Bennet', caps:11, points:10, position:'Centre'})
 CREATE (SBerghan:Person {name:'Simon Berghan', caps:6, points:0, position:'Prop'})
@@ -175,6 +234,9 @@ CREATE (GTurner:Person {name:'George Turner', caps:0, points:0, position:'Hooker
 CREATE (HWatson:Person {name:'Hamish Watson', caps:11, points:0, position:'Back Row'})
 CREATE (JWelsh:Person {name:'Jon Welsh', caps:2, points:5, position:'Prop'})
 CREATE (RWilson:Person {name:'Ryan Wilson', caps:19, points:0, position:'Back Row'})
+
+CREATE (GTownsend:Person {name:'Gregor Townsend', years_coached:1})
+CREATE (Murrayfield:Grounds {name:'Murrayfield', opened:'March 21 1925', capacity:67144})
 CREATE
 	(JBarclay)-[:PLAYS_FOR]->(Scotland),
 	(MBennet)-[:PLAYS_FOR]->(Scotland),
@@ -222,4 +284,270 @@ CREATE
 	(JWelsh)-[:PLAYS_FOR]->(Scotland),
 	(RWilson)-[:PLAYS_FOR]->(Scotland),
 	(GTownsend)-[:COACHS]->(Scotland),
-	(Murrayfield)-[:GROUNDS_OF]->(Scotland),
+	(Murrayfield)-[:GROUNDS_OF]->(Scotland)
+ 
+ 
+CREATE (Italy:Team {name:'Italy', coach:'Conor OShea', captain:'Sergio Parisse'})
+
+CREATE (TAllan:Person {name:'Tommaso Allan', caps:18, points:71, position:'Fly Half'})
+CREATE (MBellini:Person {name:'Mattia Bellini', caps:10, points:10, position:'Centre'})
+CREATE (TBenvenuti:Person {name:'Tommaso Benvenuti', caps:23, points:10, position:'Centre'})
+CREATE (GBiagi:Person {name:'George Biagi', caps:16, points:0, position:'Lock'})
+CREATE (LBigi:Person {name:'Luca Bigi', caps:3, points:0, position:'Hooker'})
+CREATE (GBisegni:Person {name:'Giulio Bisgeni', caps:6, points:0, position:'Centre'})
+CREATE (TBoni:Person {name:'Tommaso Boni', caps:3, points:0, position:'Centre'})
+CREATE (DBudd:Person {name:'Dean Budd', caps:5, points:0, position:'Lock'})
+CREATE (CCanna:Person {name:'Carlo Canna', caps:11, points:41, position:'Fly Half'})
+CREATE (TCastello:Person {name:'Tommaso Costello', caps:5, points:0, position:'Centre'})
+CREATE (OFabiani:Person {name:'Oliviero Fabiani', caps:4, points:0, position:'Hooker'})
+CREATE (SFerrari:Person {name:'Simone Ferrari', caps:5, points:0, position:'Prop'})
+CREATE (MFuser:Person {name:'Marco Fuser', caps:11, points:5, position:'Lock'})
+CREATE (LGhiraldini:Person {name:'Leonardo Ghiraldini', caps:48, points:5, position:'Hooker'})
+CREATE (RGiammarioli:Person {name:'Renato Giammarioli', caps:1, points:0, position:'No. 8'})
+CREATE (EGori:Person {name:'Edoardo Gori', caps:31, points:10, position:'Scrum Half'})
+CREATE (JHayward:Person {name:'Jayden Hayward', caps:5, points:0, position:'Utility Back'})
+CREATE (GLicata:Person {name:'Giovanni Licata', caps:2, points:0, position:'Back Row'})
+CREATE (ALovotti:Person {name:'Andrea Lovotti', caps:15, points:0, position:'Prop'})
+CREATE (MMbanda:Person {name:'Maxime Mbanda', caps:9, points:0, position:'Back Row'})
+CREATE (IMcKinley:Person {name:'Ian McKinley', caps:0, points:0, position:'Fly Half'})
+CREATE (MMinozzi:Person {name:'Matteo Minozzi', caps:5, points:20, position:'Full Back'})
+CREATE (SNegri:Person {name:'Sebastien Negri', caps:5, points:0, position:'Lock'})
+CREATE (EPadovani:Person {name:'Edoardo Padovani', caps:8, points:3, position:'Fly Half'})
+CREATE (GPalazzani:Person {name:'Guglielmo Palazani', caps:10, points:5, position:'Scrum Half'})
+CREATE (SParisse:Person {name:'Sergio Parisse', caps:65, points:38, position:'No. 8'})
+CREATE (TPasquali:Person {name:'Tizano Pasquali', caps:5, points:0, position:'Prop'})
+CREATE (JPolledri:Person {name:'Jake Polledri', caps:1, points:0, position:'Back Row'})
+CREATE (NQuaglio:Person {name:'Nicola Quaglio', caps:5, points:0, position:'Prop'})
+CREATE (FRuzza:Person {name:'Feferico Ruzza', caps:4, points:0, position:'Back Row'})
+CREATE (LSarto:Person {name:'Leonardo Sarto', caps:14, points:20, position:'Winger'})
+CREATE (BSteyn:Person {name:'Braam Steyn', caps:10, points:0, position:'Flanker'})
+CREATE (TTebaldi:Person {name:'Tito Tebaldi', caps:7, points:0, position:'Scrum Half'})
+CREATE (MVioli:Person {name:'Marcello Volio', caps:6, points:0, position:'Scrum Half'})
+CREATE (AZanni:Person {name:'Alessandro Zanni', caps:50, points:5, position:'Back Row'})
+
+CREATE (COShea:Person {name:'Conor OShea', years_coached:2})
+CREATE (Olimpico:Grounds {name:'Stadio Olimpico', opened:'2012', capacity:70634})
+CREATE
+  (TAllan)-[:PLAYS_FOR]->(Italy),
+  (MBellini)-[:PLAYS_FOR]->(Italy),
+  (TBenvenuti)-[:PLAYS_FOR]->(Italy),
+  (GBiagi)-[:PLAYS_FOR]->(Italy),
+  (LBigi)-[:PLAYS_FOR]->(Italy),
+  (GBisegni)-[:PLAYS_FOR]->(Italy),
+  (TBoni)-[:PLAYS_FOR]->(Italy),
+  (DBudd)-[:PLAYS_FOR]->(Italy),
+  (CCanna)-[:PLAYS_FOR]->(Italy),
+  (TCastello)-[:PLAYS_FOR]->(Italy),
+  (OFabiani)-[:PLAYS_FOR]->(Italy),
+  (SFerrari)-[:PLAYS_FOR]->(Italy),
+  (MFuser)-[:PLAYS_FOR]->(Italy),
+  (LGhiraldini)-[:PLAYS_FOR]->(Italy),
+  (RGiammarioli)-[:PLAYS_FOR]->(Italy),
+  (EGori)-[:PLAYS_FOR]->(Italy),
+  (JHayward)-[:PLAYS_FOR]->(Italy),
+  (GLicata)-[:PLAYS_FOR]->(Italy),
+  (ALovotti)-[:PLAYS_FOR]->(Italy),
+  (MMbanda)-[:PLAYS_FOR]->(Italy),
+  (IMcKinley)-[:PLAYS_FOR]->(Italy),
+  (MMinozzi)-[:PLAYS_FOR]->(Italy),
+  (SNegri)-[:PLAYS_FOR]->(Italy),
+  (EPadovani)-[:PLAYS_FOR]->(Italy),
+  (GPalazzani)-[:PLAYS_FOR]->(Italy),
+  (SParisse)-[:PLAYS_FOR]->(Italy),
+  (TPasquali)-[:PLAYS_FOR]->(Italy),
+  (JPolledri)-[:PLAYS_FOR]->(Italy),
+  (NQuaglio)-[:PLAYS_FOR]->(Italy),
+  (FRuzza)-[:PLAYS_FOR]->(Italy),
+  (LSarto)-[:PLAYS_FOR]->(Italy),
+  (BSteyn)-[:PLAYS_FOR]->(Italy),
+  (TTebaldi)-[:PLAYS_FOR]->(Italy),
+  (MVioli)-[:PLAYS_FOR]->(Italy),
+  (AZanni)-[:PLAYS_FOR]->(Italy),
+  (COShea)-[:COACHS]->(Italy),
+  (Olimpico)-[:GROUNDS_OF]->(Italy)
+
+  
+CREATE (England:Team {name:'England', coach:'Eddie Jones', captain:'Dylan Hartley'})
+
+CREATE (DArmond:Person {name:'Don Armand', caps:1, points:0, position:'Back Row'})
+CREATE (LBoyce:Person {name:'Lewis Boyce', caps:0, points:0, position:'Prop'})
+CREATE (MBrown:Person {name:'Mike Brown', caps:32, points:25, position:'Full Back'})
+CREATE (DCare:Person {name:'Danny Care', caps:37, points:54, position:'Scrum Half'})
+CREATE (DCole:Person {name:'Dan Cole', caps:42, points:15, position:'Prop'})
+CREATE (LCDickie:Person {name:'Luke Cowan-Dickie', caps:3, points:0, position:'Hooker'})
+CREATE (EDaly:Person {name:'Elliot Daly', caps:9, points:26, position:'Centre'})
+CREATE (TDunn:Person {name:'Tom Dunn', caps:0, points:0, position:'Hooker'})
+CREATE (NEarle:Person {name:'Nathan Earle', caps:0, points:0, position:'Winger'})
+CREATE (OFarrell:Person {name:'Owen Farrell', caps:29, points:343, position:'Fly Half'})
+CREATE (GFord:Person {name:'George Ford', caps:22, points:88, position:'Fly Half'})
+CREATE (JGeorge:Person {name:'Jamie George', caps:13, points:0, position:'Hooker'})
+CREATE (GGraham:Person {name:'Gary Graham', caps:0, points:0, position:'Flanker'})
+CREATE (DHartley:Person {name:'Dylan Hartley', caps:49, points:0, position:'Hooker'})
+CREATE (JHaskell:Person {name:'James Haskell', caps:42, points:15, position:'Back Row'})
+CREATE (AHepurn:Person {name:'Alec Hepburn', caps:2, points:0, position:'Prop'})
+CREATE (NHughes:Person {name:'Nathan Hughes', caps:7, points:0, position:'No. 8'})
+CREATE (NIsiekwe:Person {name:'Nick Isiekwe', caps:0, points:0, position:'Lock'})
+CREATE (MItoje:Person {name:'Maro Itoje', caps:14, points:0, position:'Lock'})
+CREATE (JJoseph:Person {name:'Jonathon Joseph', caps:19, points:50, position:'Centre'})
+CREATE (GKruis:Person {name:'George Kruis', caps:12, points:5, position:'Lock'})
+CREATE (JLaunchbury:Person {name:'Joe Launchbury', caps:23, points:0, position:'Lock'})
+CREATE (CLawes:Person {name:'Courtney Lawes', caps:26, points:0, position:'Lock'})
+CREATE (ALozowski:Person {name:'Alex Lozowski', caps:0, points:0, position:'FlyHalf'})
+CREATE (HMallinder:Person {name:'Harry Mallinder', caps:0, points:0, position:'Centre'})
+CREATE (JMarler:Person {name:'Joe Marler', caps:27, points:0, position:'Prop'})
+CREATE (JMay:Person {name:'Jonny May', caps:15, points:20, position:'Winger'})
+CREATE (ZMercer:Person {name:'Zach Mercer', caps:0, points:0, position:'No. 8'})
+CREATE (JNowell:Person {name:'Jack Nowell', caps:21, points:40, position:'Winger'})
+CREATE (CRobshaw:Person {name:'Chris Robshaw', caps:30, points:5, position:'Flanker'})
+CREATE (SSimmonds:Person {name:'Sam Simmonds', caps:4, points:10, position:'Back Row'})
+CREATE (KSinkler:Person {name:'Kyle Sinkler', caps:6, points:0, position:'Prop'})
+CREATE (HSlade:Person {name:'Henry Slade', caps:1, points:0, position:'Fly Half'})
+CREATE (MSmith:Person {name:'Marcu Smith', caps:0, points:0, position:'Flay Half'})
+CREATE (DSolomona:Person {name:'Denny Solomona', caps:0, points:0, position:'Winger'})
+CREATE (BTeo:Person {name:'Ben Teo', caps:10, points:10, position:'Centre'})
+CREATE (HThomas:Person {name:'Henry Thomas', caps:4, points:0, position:'Prop'})
+CREATE (SUnderhill:Person {name:'Sam Underhill', caps:3, points:0, position:'Back Row'})
+CREATE (MVunipola:Person {name:'Mako Vunipola', caps:28, points:5, position:'Prop'})
+CREATE (AWatson:Person {name:'Anthony Watson', caps:17, points:40, position:'Winger'})
+CREATE (RWigglesworth:Person {name:'Richard Wigglesworth', caps:13, points:5, position:'Scrum Half'})
+CREATE (HWilliams:Person {name:'Harry Williams', caps:3, points:0, position:'Prop'})
+CREATE (BYoungs:Person {name:'Ben Youngs', caps:32, points:25, position:'Scrum Half'})
+
+CREATE (EJones:Person {name:'Eddie Jones', years_coached:3})
+CREATE (Twickenham:Grounds {name:'Twickenham', opened:'1910', capacity:82000})
+CREATE
+  (DArmond)-[:PLAYS_FOR]->(England),
+  (LBoyce)-[:PLAYS_FOR]->(England),
+  (MBrown)-[:PLAYS_FOR]->(England),
+  (DCare)-[:PLAYS_FOR]->(England),
+  (DCole)-[:PLAYS_FOR]->(England),
+  (LCDickie)-[:PLAYS_FOR]->(England),
+  (EDaly)-[:PLAYS_FOR]->(England),
+  (TDunn)-[:PLAYS_FOR]->(England),
+  (NEarle)-[:PLAYS_FOR]->(England),
+  (OFarrell)-[:PLAYS_FOR]->(England),
+  (GFord)-[:PLAYS_FOR]->(England),
+  (JGeorge)-[:PLAYS_FOR]->(England),
+  (GGraham)-[:PLAYS_FOR]->(England),
+  (DHartley)-[:PLAYS_FOR]->(England),
+  (JHaskell)-[:PLAYS_FOR]->(England),
+  (AHepurn)-[:PLAYS_FOR]->(England),
+  (NHughes)-[:PLAYS_FOR]->(England),
+  (NIsiekwe)-[:PLAYS_FOR]->(England),
+  (MItoje)-[:PLAYS_FOR]->(England),
+  (JJoseph)-[:PLAYS_FOR]->(England),
+  (GKruis)-[:PLAYS_FOR]->(England),
+  (JLaunchbury)-[:PLAYS_FOR]->(England),
+  (CLawes)-[:PLAYS_FOR]->(England),
+  (ALozowski)-[:PLAYS_FOR]->(England),
+  (HMallinder)-[:PLAYS_FOR]->(England),
+  (JMarler)-[:PLAYS_FOR]->(England),
+  (JMay)-[:PLAYS_FOR]->(England),
+  (ZMercer)-[:PLAYS_FOR]->(England),
+  (JNowell)-[:PLAYS_FOR]->(England),
+  (CRobshaw)-[:PLAYS_FOR]->(England),
+  (SSimmonds)-[:PLAYS_FOR]->(England),
+  (KSinkler)-[:PLAYS_FOR]->(England),
+  (HSlade)-[:PLAYS_FOR]->(England),
+  (MSmith)-[:PLAYS_FOR]->(England),
+  (DSolomona)-[:PLAYS_FOR]->(England),
+  (BTeo)-[:PLAYS_FOR]->(England),
+  (HThomas)-[:PLAYS_FOR]->(England),
+  (SUnderhill)-[:PLAYS_FOR]->(England),
+  (MVunipola)-[:PLAYS_FOR]->(England),
+  (AWatson)-[:PLAYS_FOR]->(England),
+  (RWigglesworth)-[:PLAYS_FOR]->(England),
+  (HWilliams)-[:PLAYS_FOR]->(England),
+  (BYoungs)-[:PLAYS_FOR]->(England),
+  (EJones)-[:COACHS]->(England),
+  (Twickenham)-[:GROUNDS_OF]->(England)
+  
+  
+CREATE (Wales:Team {name:'Wales', coach:'Warren Gatland', captain:'Alun Wyn Jones'})
+  
+CREATE (JAdams:Person {name:'Josh Adams', caps:2, points:0, position:'Winger'})
+CREATE (HAmos:Person {name:'Hallam Amos', caps:1, points:0, position:'Winger'})
+CREATE (GAnscombe:Person {name:'Gareth Anscombe', caps:7, points:12, position:'Fly Half'})
+CREATE (SBalwdin:Person {name:'Scott Baldwin', caps:14, points:0, position:'Hooker'})
+CREATE (ABeard:Person {name:'Adam Beard', caps:0, points:0, position:'Lock'})
+CREATE (DBiggar:Person {name:'Dan Biggar', caps:25, points:102, position:'Fly Half'})
+CREATE (ACuthbert:Person {name:'Alex Cuthbert', caps:20, points:40, position:'Winger'})
+CREATE (ADavies:Person {name:'Aled Davies', caps:3, points:0, position:'Scrum Half'})
+CREATE (BDavies:Person {name:'Bradley Davies', caps:24, points:0, position:'Lock'})
+CREATE (GDavies:Person {name:'Gareth Davies', caps:14, points:20, position:'Scrum Half'})
+CREATE (JDavies:Person {name:'James Davies', caps:1, points:0, position:'Back Row'})
+CREATE (SDavies:Person {name:'Seb Davies', caps:0, points:0, position:'Lock'})
+CREATE (EDee:Person {name:'Elliot Dee', caps:5, points:0, position:'Hooker'})
+CREATE (REvans:Person {name:'Rob Evans', caps:17, points:0, position:'Prop'})
+CREATE (SEvans:Person {name:'Steff Evans', caps:4, points:10, position:'Winger'})
+CREATE (TFaletau:Person {name:'Taulupe Faletau', caps:31, points:15, position:'No. 8'})
+CREATE (TFrancis:Person {name:'Tomas Francis', caps:14, points:0, position:'Prop'})
+CREATE (LHalfpenny:Person {name:'Leigh Halfpenny', caps:37, points:388, position:'Full Back'})
+CREATE (CHill:Person {name:'Cory Hill', caps:7, points:5, position:'Lock'})
+CREATE (EJenkins:Person {name:'Ellis Jenkins', caps:1, points:0, position:'Flanker'})
+CREATE (AWJones:Person {name:'Alun Wyn Jones', caps:48, points:5, position:'Lock'})
+CREATE (RJones:Person {name:'Rhodri Jones', caps:6, points:0, position:'Prop'})
+CREATE (WJones:Person {name:'Wyn Jones', caps:3, points:0, position:'Prop'})
+CREATE (SLee:Person {name:'Samson Lee', caps:17, points:0, position:'Prop'})
+CREATE (DLewis:Person {name:'Dillon Lewis', caps:0, points:0, position:'Prop'})
+CREATE (RMoriarty:Person {name:'Ross Moriarty', caps:,9 points:10, position:'Back Row'})
+CREATE (JNavidi:Person {name:'Josh Navidi', caps:4, points:0, position:'Back Row'})
+CREATE (GNorth:Person {name:'George North', caps:32, points:85, position:'Winger})
+CREATE (KOwens:Person {name:'Ken Owens', caps:30, points:0, position:'Hooker'})
+CREATE (HParkes:Person {name:'Hadleigh Parkes', caps:5, points:5, position:'Centre'})
+CREATE (RPatchell:Person {name:'Rhys Patchell', caps:3, points:3, position:'Fly Half'})
+CREATE (AShingler:Person {name:'Aaron Shingler', caps:8, points:5, position:'Lock'})
+CREATE (NSmith:Person {name:'Nicky Smith', caps:7, points:0, position:'Prop'})
+CREATE (JTipuric:Person {name:'Justin Tipuric', caps:31, points:5, position:'Flanker'})
+CREATE (OWatkin:Person {name:'Owen Watkins', caps:2, points:0, position:'Centre'})
+CREATE (RWebb:Person {name:'Rhys Webb', caps:17, points:20, position:'Scrum Half'})
+CREATE (LWilliams:Person {name:'Liam Williams', caps:22, points:35, position:'Full Back'})
+CREATE (OWilliams:Person {name:'Owen Williams', caps:0, points:0, position:'Fly Half'})
+CREATE (SWilliams:Person {name:'Scott Williams', caps:21, points:20, position:'Centre'})
+CREATE (TWilliams:Person {name:'Tomos Williams', caps:0, points:0, position:'Scrum Half'})
+
+CREATE (WGatland:Person {name:'Warren Gatland', years_coached:11})
+CREATE (Principality:Grounds {name:'Principality Stadium', opened:'1997', capacity:74500})
+CREATE
+  (JAdams)-[:PLAYS_FOR]->(Wales),
+  (HAmos)-[:PLAYS_FOR]->(Wales),
+  (GAnscombe)-[:PLAYS_FOR]->(Wales),
+  (SBalwdin)-[:PLAYS_FOR]->(Wales),
+  (ABeard)-[:PLAYS_FOR]->(Wales),
+  (DBiggar)-[:PLAYS_FOR]->(Wales),
+  (ACuthbert)-[:PLAYS_FOR]->(Wales),
+  (ADavies)-[:PLAYS_FOR]->(Wales),
+  (BDavies)-[:PLAYS_FOR]->(Wales),
+  (GDavies)-[:PLAYS_FOR]->(Wales),
+  (JDavies)-[:PLAYS_FOR]->(Wales),
+  (SDavies)-[:PLAYS_FOR]->(Wales),
+  (EDee)-[:PLAYS_FOR]->(Wales),
+  (REvans)-[:PLAYS_FOR]->(Wales),
+  (SEvans)-[:PLAYS_FOR]->(Wales),
+  (TFaletau)-[:PLAYS_FOR]->(Wales),
+  (TFrancis)-[:PLAYS_FOR]->(Wales),
+  (LHalfpenny)-[:PLAYS_FOR]->(Wales),
+  (CHill)-[:PLAYS_FOR]->(Wales),
+  (EJenkins)-[:PLAYS_FOR]->(Wales),
+  (AWJones)-[:PLAYS_FOR]->(Wales),
+  (RJones)-[:PLAYS_FOR]->(Wales),
+  (WJones)-[:PLAYS_FOR]->(Wales),
+  (SLee)-[:PLAYS_FOR]->(Wales),
+  (DLewis)-[:PLAYS_FOR]->(Wales),
+  (RMoriarty)-[:PLAYS_FOR]->(Wales),
+  (JNavidi)-[:PLAYS_FOR]->(Wales),
+  (GNorth)-[:PLAYS_FOR]->(Wales),
+  (KOwens)-[:PLAYS_FOR]->(Wales),
+  (HParkes)-[:PLAYS_FOR]->(Wales),
+  (RPatchell)-[:PLAYS_FOR]->(Wales),
+  (AShingler)-[:PLAYS_FOR]->(Wales),
+  (NSmith)-[:PLAYS_FOR]->(Wales),
+  (JTipuric)-[:PLAYS_FOR]->(Wales),
+  (OWatkin)-[:PLAYS_FOR]->(Wales),
+  (RWebb)-[:PLAYS_FOR]->(Wales),
+  (LWilliams)-[:PLAYS_FOR]->(Wales),
+  (OWilliams)-[:PLAYS_FOR]->(Wales),
+  (SWilliams)-[:PLAYS_FOR]->(Wales),
+  (TWilliams)-[:PLAYS_FOR]->(Wales),
+  (WGatland)-[:COACHS]->(Wales),
+  (Principality)-[:GROUNDS_OF]->(Wales),
