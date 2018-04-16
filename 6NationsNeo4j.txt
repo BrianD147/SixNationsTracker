@@ -28,3 +28,99 @@ CREATE
   (CHealy)-[:PLAYS_FOR]->(Ireland),
   (JSchmidt)-[:COACHS]->(Ireland),
   (Aviva)-[:GROUNDS_OF]->(Ireland)
+CREATE (France:Team {name:'France', coach:'Jacques Brunel', captain:'Guilhem Guirado'})
+CREATE (MBabillot:Person {name:'Mathieu Babillot', caps:1, points:0, position:'Back Row'})
+CREATE (MBastareaud:Person {name:'Mathieu Bastareaud', caps:26, points:20, position:'Centre'})
+CREATE (LBeauxis:Person {name:'Lionel Beauxis', caps:16, points:70, position:'Fly Half'})
+CREATE (ABelleau:Person {name:'Anthony Belleau', caps:2, points:2, position:'Fly Half'})
+CREATE (EBArous:Person {name:'Eddy Ben Arous', caps:9, points:0, position:'Prop'})
+CREATE (HBonneval:Person {name:'Hugo Bonneval', caps:6, points:15, position:'Full Back'})
+CREATE (YCamara:Person {name:'Yacouba Camara', caps:8, points:0, position:'Flanker'})
+CREATE (CChat:Person {name:'Camille', caps:6, points:0, position:'Hooker'})
+CREATE (HChavancy:Person {name:'Henry Chavancy', caps:2, points:0, position:'Centre'})
+CREATE (BCouilloud:Person {name:'Baptiste Couilloud', caps:3, points:0, position:'Scrum Half'})
+CREATE (JDanty:Person {name:'Jonathan Danty', caps:3, points:0, position:'Centre'})
+CREATE (GDaoumayrou:Person {name:'Geoffrery Daoumayrou', caps:4, points:0, position:'Centre'})
+CREATE (BDulin:Person {name:'Brice Dulin', caps:8, points:15, position:'Full Back'})
+CREATE (ADupont:Person {name:'Antoine Dupont', caps:3, points:0, position:'Scrum Half'})
+CREATE (BFall:Person {name:'Benjamin Fall', caps:8, points:5, position:'Winger'})
+CREATE (GFickou:Person {name:'Gael Fickou', caps:20, points:25, position:'Centre'})
+CREATE (PGabrillagues:Person {name:'Paul Gabrillagues', caps:5, points:5, position:'Lock'})
+CREATE (KGalletier:Person {name:'Kelian Galltier', caps:2, points:0, position:'Flanker'})
+CREATE (CGSa:Person {name:'Cedate Gomes Sa', caps:5, points:0, position:'Prop'})
+CREATE (KGourdon:Person {name:'Kevin Gourdon', caps:6, points:0, position:'Back Row'})
+CREATE (RGrosso:Person {name:'Remy Grosso', caps:3, points:0, position:'Winger'})
+CREATE (GGuirado:Person {name:'Guilhem Guirado', caps:28, points:10, position:'Hooker'})
+CREATE (AIturria:Person {name:'Arthur Iturria', caps:3, points:0, position:'Lock'})
+CREATE (MJalibert:Person {name:'Matthieu Jalibert', caps:1, points:0, position:'Fly Half'})
+CREATE (AJelonch:Person {name:'Anthony Jelonch', caps:0, points:0, position:'Lock'})
+CREATE (FLambey:Person {name:'Felix Lambey', caps:0, points:0, position:'Back Row'})
+CREATE (RLamerat:Person {name:'Remi Lamerat', caps:10, points:5, position:'Centre'})
+CREATE (ALapandry:Person {name:'Alexandre Lapandry', caps:6, points:5, position:'Flanker'})
+CREATE (WLauret:Person {name:'Wenceslas Lauret', caps:12, points:0, position:'Flanker'})
+CREATE (BLRoux:Person {name:'Bernard Le Roux', caps:12, points:0, position:'Back Row'})
+CREATE (SMacalou:Person {name:'Sekou Macalou', caps:0, points:0, position:'Back Row'})
+CREATE (MMachenaud:Person {name:'Maxime Machenaud', caps:22, points:107, position:'Scrum Half'})
+CREATE (GPalis:Person {name:'Geoffrery Palis', caps:2, points:0, position:'Full Back'})
+CREATE (MParra:Person {name:'Morgan Parra', caps:31, points:173, position:'Scrum Half'})
+CREATE (APelissie:Person {name:'Adrien Pelissie', caps:5, points:0, position:'Hooker'})
+CREATE (LPicamoles:Person {name:'Louis Picamoles', caps:28, points:20, position:'No. 8'})
+CREATE (JPoirot:Person {name:'Jefferson Poirot', caps:10, points:0, position:'Prop'})
+CREATE (DPriso:Person {name:'Dany Priso', caps:4, points:0, position:'Prop'})
+CREATE (BSerin:Person {name:'Baptiste Serin', caps:6, points:6, position:'Scrum Half'})
+CREATE (RSlimani:Person {name:'Rabah Slimani', caps:23, points:5, position:'Prop'})
+CREATE (RTaofifenua:Person {name:'Romain Taofifenua', caps:8, points:5, position:'Lock'})
+CREATE (MTauleigne:Person {name:'Marco Tauleigne', caps:5, points:0, position:'Back Row'})
+CREATE (TThomas:Person {name:'Teddy Thomas', caps:5, points:15, position:'Winger'})
+CREATE (CTolofua:Person {name:'Christopher Tolofua', caps:3, points:0, position:'Hooker'})
+CREATE (FTrinh-Duc:Person {name:'Fracois Trinh-Duc', caps:36, points:23, position:'Fly Half'})
+CREATE (SVahaamahina:Person {name:'Sebastien Vahaamahina', caps:16, points:0, position:'Lock'})
+CREATE (VVakatawa:Person {name:'Virimi Vakatawa', caps:11, points:10, position:'Winger'})
+CREATE
+	(MBabillot)-[:PLAYS_FOR]->(France),
+	(MBastareaud)-[:PLAYS_FOR]->(France),
+	(LBeauxis)-[:PLAYS_FOR]->(France),
+	(ABelleau)-[:PLAYS_FOR]->(France),
+	(EBArous)-[:PLAYS_FOR]->(France),
+	(HBonneval)-[:PLAYS_FOR]->(France),
+	(YCamara)-[:PLAYS_FOR]->(France),
+	(CChat)-[:PLAYS_FOR]->(France),
+	(HChavancy)-[:PLAYS_FOR]->(France),
+	(BCouilloud)-[:PLAYS_FOR]->(France),
+	(JDanty)-[:PLAYS_FOR]->(France),
+	(GDaoumayrou)-[:PLAYS_FOR]->(France),
+	(BDulin)-[:PLAYS_FOR]->(France),
+	(ADupont)-[:PLAYS_FOR]->(France),
+	(BFall)-[:PLAYS_FOR]->(France),
+	(GFickou)-[:PLAYS_FOR]->(France),
+	(PGabrillagues)-[:PLAYS_FOR]->(France),
+	(KGalletier)-[:PLAYS_FOR]->(France),
+	(CGSa)-[:PLAYS_FOR]->(France),
+	(KGourdon)-[:PLAYS_FOR]->(France),
+	(RGrosso)-[:PLAYS_FOR]->(France),
+	(GGuirado)-[:PLAYS_FOR]->(France),
+	(AIturria)-[:PLAYS_FOR]->(France),
+	(MJalibert)-[:PLAYS_FOR]->(France),
+	(AJelonch)-[:PLAYS_FOR]->(France),
+	(FLambey)-[:PLAYS_FOR]->(France),
+	(RLamerat)-[:PLAYS_FOR]->(France),
+	(ALapandry)-[:PLAYS_FOR]->(France),
+	(WLauret)-[:PLAYS_FOR]->(France),
+	(BLRoux)-[:PLAYS_FOR]->(France),
+	(SMacalou)-[:PLAYS_FOR]->(France),
+	(MMachenaud)-[:PLAYS_FOR]->(France),
+	(GPalis)-[:PLAYS_FOR]->(France),
+	(MParra)-[:PLAYS_FOR]->(France),
+	(APelissie)-[:PLAYS_FOR]->(France),
+	(LPicamoles)-[:PLAYS_FOR]->(France),
+	(JPoirot)-[:PLAYS_FOR]->(France),
+	(DPriso)-[:PLAYS_FOR]->(France),
+	(BSerin)-[:PLAYS_FOR]->(France),
+	(RSlimani)-[:PLAYS_FOR]->(France),
+	(RTaofifenua)-[:PLAYS_FOR]->(France),
+	(MTauleigne)-[:PLAYS_FOR]->(France),
+	(TThomas)-[:PLAYS_FOR]->(France),
+	(CTolofua)-[:PLAYS_FOR]->(France),
+	(FTrinh-Duc)-[:PLAYS_FOR]->(France),
+	(SVahaamahina)-[:PLAYS_FOR]->(France),
+	(VVakatawa)-[:PLAYS_FOR]->(France),
