@@ -129,7 +129,7 @@ CREATE
 	(JBrunel)-[:COACHS]->(Ireland),
 	(Stade)-[:GROUNDS_OF]->(Ireland)
 CREATE (Scotland:Team {name:'Scotland', coach:'Gregor Townsend', captain:'Barclay Watson'})
-CREATE (GTownsend:Person {name:'Gregor Townsend', years_coached:})
+CREATE (GTownsend:Person {name:'Gregor Townsend', years_coached:1})
 CREATE (Murrayfield:Grounds {name:'Murrayfield', opened:'March 21 1925', capacity:67144})
 CREATE (JBarclay:Person {name:'John Barclay', caps:36, points:15, position:'Back Row'})
 CREATE (MBennet:Person {name:'Mark Bennet', caps:11, points:10, position:'Centre'})
