@@ -34,60 +34,62 @@ namespace SixNationsTracker
             var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "Rubydoy14");
             client.Connect();
 
+            IEnumerable<string> players;
+
             switch (e.Parameter) {
                 case 1:
                     tblHeader.Text = "IRELAND";
 
-                    IEnumerable<string> irelandPlayer = client.Cypher
+                    players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
                     .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = irelandPlayer;
+                    lvPlayers.ItemsSource = players;
                     break;
                 case 2:
                     tblHeader.Text = "SCOTLAND";
 
-                    IEnumerable<string> scotlandPlayers = client.Cypher
-                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
+                    players = client.Cypher
+                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Scotland'})")
                     .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = scotlandPlayers;
+                    lvPlayers.ItemsSource = players;
                     break;
                 case 3:
                     tblHeader.Text = "ENGLAND";
 
-                    IEnumerable<string> englandPlayers = client.Cypher
-                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
+                    players = client.Cypher
+                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'England'})")
                     .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = englandPlayers;
+                    lvPlayers.ItemsSource = players;
                     break;
                 case 4:
                     tblHeader.Text = "FRANCE";
 
-                    IEnumerable<string> francePlayers = client.Cypher
-                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
+                    players = client.Cypher
+                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'France'})")
                     .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = francePlayers;
+                    lvPlayers.ItemsSource = players;
                     break;
                 case 5:
                     tblHeader.Text = "WALES";
 
-                    IEnumerable<string> walesPlayers = client.Cypher
-                .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
+                    players = client.Cypher
+                .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Wales'})")
                 .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = walesPlayers;
+                    lvPlayers.ItemsSource = players;
                     break;
                 case 6:
                     tblHeader.Text = "ITALY";
 
-                    IEnumerable<string> italyPlayers = client.Cypher
+                    players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Italy'})")
                     .Return<string>("p.name").Results;
 
-                    lvPlayers.ItemsSource = italyPlayers;
+                    lvPlayers.ItemsSource = players;
                     break;
             }
         }
@@ -95,6 +97,29 @@ namespace SixNationsTracker
         private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void lvPlayers_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var name = lvPlayers.SelectedItem;
+
+            var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "Rubydoy14");
+            client.Connect();
+
+            IEnumerable<string> info = client.Cypher
+                    .Match("(p:Person) WHERE p.name = '" + name + "'")
+                    .Return<string>("properties(p)").Results;
+            tbCoach.Text = "" + name;
+
+            var singleString = string.Join(",",info.ToArray());
+            var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
+
+            foreach(var c in charsToRemove)
+            {
+                singleString = singleString.Replace(c, string.Empty);
+            }
+
+            tbGrounds.Text = singleString;
         }
     }
 }
