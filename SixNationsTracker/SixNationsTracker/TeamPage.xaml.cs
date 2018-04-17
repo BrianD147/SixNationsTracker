@@ -35,10 +35,12 @@ namespace SixNationsTracker
             client.Connect();
 
             IEnumerable<string> players;
+            IEnumerable<string> coach;
+            IEnumerable<string> grounds;
 
             switch (e.Parameter) {
                 case 1:
-                    tblHeader.Text = "IRELAND";
+                    tblHeader.Text = "Ireland";
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
@@ -83,7 +85,7 @@ namespace SixNationsTracker
                     lvPlayers.ItemsSource = players;
                     break;
                 case 6:
-                    tblHeader.Text = "ITALY";
+                    tblHeader.Text = "Italy";
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Italy'})")
@@ -92,6 +94,27 @@ namespace SixNationsTracker
                     lvPlayers.ItemsSource = players;
                     break;
             }
+
+            coach = client.Cypher
+            .Match("(p:Person)-[:COACHS]->(m:Team {name: '" + tblHeader.Text + "'})")
+            .Return<string>("properties(p)").Results;
+
+            grounds = client.Cypher
+           .Match("(g:Grounds)-[:GROUNDS_OF]->(m:Team {name: '" + tblHeader.Text + "'})")
+           .Return<string>("properties(g)").Results;
+
+            var singleString1 = string.Join(",", coach.ToArray());
+            var singleString2 = string.Join(",", grounds.ToArray());
+            var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
+
+            foreach (var c in charsToRemove)
+            {
+                singleString1 = singleString1.Replace(c, string.Empty);
+                singleString2 = singleString2.Replace(c, string.Empty);
+            }
+
+            tbCoach.Text = singleString1;
+            tbGrounds.Text = singleString2;
         }
 
         private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
@@ -119,7 +142,7 @@ namespace SixNationsTracker
                 singleString = singleString.Replace(c, string.Empty);
             }
 
-            tbGrounds.Text = singleString;
+            tbPlayerInfo.Text = singleString;
         }
     }
 }

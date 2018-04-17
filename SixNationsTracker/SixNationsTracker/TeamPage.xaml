@@ -32,17 +32,19 @@
                     <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock x:Name="tbCoach" Grid.Column="0" Grid.Row="2" FontSize="4" Text="{Binding}"/>
-                <TextBlock x:Name="tbGrounds" Grid.Column="5" Grid.Row="0" FontSize="4" Text="{Binding}"/>
+                <Image x:Name="imgLogo" Grid.Column="0" Grid.Row="0" Source="Images/IrelandLogo.png"/>
+                <TextBlock x:Name="tbCoach" Grid.Column="0" Grid.Row="2" FontSize="8" Text="{Binding}"/>
+                <TextBlock x:Name="tbGrounds" Grid.Column="0" Grid.Row="4" FontSize="8" Text="{Binding}"/>
                 <ListView x:Name="lvPlayers" Grid.Column="2" Grid.RowSpan="5" Tapped="lvPlayers_Tapped" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Height="10">
-                                <TextBlock x:Name="tbItem" Height="10" Text="{Binding}" FontSize="6" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="tbItem" Text="{Binding}" FontSize="8" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock x:Name="tbPlayerInfo" Grid.Column="5" Grid.Row="2" FontSize="8" Text="{Binding}"/>
             </Grid>
         </Viewbox>
     </Grid>
