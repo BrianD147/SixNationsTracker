@@ -32,8 +32,22 @@
                     <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image x:Name="imgLogo" Grid.Column="0" Grid.Row="0" Source="Images/IrelandLogo.png"/>
+                <Rectangle x:Name="rectLogoBackground" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="0" Fill="LightGray" RadiusX="10" RadiusY="10"/>
+                <Rectangle x:Name="rectLogo" Grid.Row="0" Grid.Column="0" Margin="5, 5, 5, 5">
+                    <Rectangle.Fill>
+                        <ImageBrush x:Name="ibLogo" ImageSource="{Binding}" />
+                    </Rectangle.Fill>
+                </Rectangle>
+
+
+                <Rectangle x:Name="tbDivide1" Grid.Column="1" Grid.RowSpan="5" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="tbDivide2" Grid.Column="3" Grid.RowSpan="5" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                
+                <Rectangle x:Name="tbCoachHeadingBackground" Grid.Column="0" Grid.Row="1" Fill="LightGray" Margin="2, 2, 2, 2" RadiusX="2" RadiusY="2"/>
                 <TextBlock x:Name="tbCoach" Grid.Column="0" Grid.Row="2" FontSize="8" Text="{Binding}"/>
+
+
+                <Rectangle x:Name="tbGroundsHeadingBackground" Grid.Column="0" Grid.Row="3" Fill="LightGray" Margin="2, 2, 2, 2" RadiusX="2" RadiusY="2"/>
                 <TextBlock x:Name="tbGrounds" Grid.Column="0" Grid.Row="4" FontSize="8" Text="{Binding}"/>
                 <ListView x:Name="lvPlayers" Grid.Column="2" Grid.RowSpan="5" Tapped="lvPlayers_Tapped" >
                     <ListView.ItemTemplate>

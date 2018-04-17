@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -38,6 +39,9 @@ namespace SixNationsTracker
             IEnumerable<string> coach;
             IEnumerable<string> grounds;
 
+            ImageBrush logo = new ImageBrush();
+            SolidColorBrush theme = new SolidColorBrush();
+
             switch (e.Parameter) {
                 case 1:
                     tblHeader.Text = "Ireland";
@@ -45,44 +49,64 @@ namespace SixNationsTracker
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Ireland'})")
                     .Return<string>("p.name").Results;
-
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/IrelandLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 0, 105, 70));
                     break;
                 case 2:
-                    tblHeader.Text = "SCOTLAND";
+                    tblHeader.Text = "Scotland";
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Scotland'})")
                     .Return<string>("p.name").Results;
-
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/ScotlandLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 4, 77, 133));
                     break;
                 case 3:
-                    tblHeader.Text = "ENGLAND";
+                    tblHeader.Text = "England";
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'England'})")
                     .Return<string>("p.name").Results;
-
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/EnglandLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
                     break;
                 case 4:
-                    tblHeader.Text = "FRANCE";
+                    tblHeader.Text = "France";
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'France'})")
                     .Return<string>("p.name").Results;
-
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/FranceLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 0, 71, 134));
                     break;
                 case 5:
-                    tblHeader.Text = "WALES";
+                    tblHeader.Text = "Wales";
 
                     players = client.Cypher
-                .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Wales'})")
-                .Return<string>("p.name").Results;
-
+                    .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Wales'})")
+                    .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/WalesLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 238, 71, 34));
                     break;
                 case 6:
                     tblHeader.Text = "Italy";
@@ -90,10 +114,18 @@ namespace SixNationsTracker
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Italy'})")
                     .Return<string>("p.name").Results;
-
                     lvPlayers.ItemsSource = players;
+
+                    logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/ItalyLogo.png", UriKind.RelativeOrAbsolute));
+                    rectLogo.Fill = logo;
+
+                    theme = new SolidColorBrush(Color.FromArgb(255, 31, 79, 162));
                     break;
             }
+
+            //Theme
+            rectTop.Fill = theme;
+            rectLogoBackground.Fill = theme;
 
             coach = client.Cypher
             .Match("(p:Person)-[:COACHS]->(m:Team {name: '" + tblHeader.Text + "'})")
@@ -103,18 +135,18 @@ namespace SixNationsTracker
            .Match("(g:Grounds)-[:GROUNDS_OF]->(m:Team {name: '" + tblHeader.Text + "'})")
            .Return<string>("properties(g)").Results;
 
-            var singleString1 = string.Join(",", coach.ToArray());
-            var singleString2 = string.Join(",", grounds.ToArray());
+            var coachInfo = string.Join(",", coach.ToArray());
+            var groundsInfo = string.Join(",", grounds.ToArray());
             var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
 
             foreach (var c in charsToRemove)
             {
-                singleString1 = singleString1.Replace(c, string.Empty);
-                singleString2 = singleString2.Replace(c, string.Empty);
+                coachInfo = coachInfo.Replace(c, string.Empty);
+                groundsInfo = groundsInfo.Replace(c, string.Empty);
             }
 
-            tbCoach.Text = singleString1;
-            tbGrounds.Text = singleString2;
+            tbCoach.Text = coachInfo;
+            tbGrounds.Text = groundsInfo;
         }
 
         private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
@@ -132,7 +164,6 @@ namespace SixNationsTracker
             IEnumerable<string> info = client.Cypher
                     .Match("(p:Person) WHERE p.name = '" + name + "'")
                     .Return<string>("properties(p)").Results;
-            tbCoach.Text = "" + name;
 
             var singleString = string.Join(",",info.ToArray());
             var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
