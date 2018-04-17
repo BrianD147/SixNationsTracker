@@ -71,6 +71,7 @@ namespace SixNationsTracker
                     break;
                 case 3:
                     tblHeader.Text = "England";
+                    rectLogoBackground.Fill = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
 
                     players = client.Cypher
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'England'})")
@@ -80,7 +81,7 @@ namespace SixNationsTracker
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/EnglandLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
 
-                    theme = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                    theme = new SolidColorBrush(Color.FromArgb(255, 186, 18, 54));
                     break;
                 case 4:
                     tblHeader.Text = "France";
@@ -123,9 +124,14 @@ namespace SixNationsTracker
                     break;
             }
 
-            //Theme
-            rectTop.Fill = theme;
+            if(tblHeader.Text != "England")
             rectLogoBackground.Fill = theme;
+
+            rectTop.Fill = theme;
+            rectDivide1.Fill = theme;
+            rectDivide2.Fill = theme;
+            rectCoachHeadingBackground.Fill = theme;
+            rectGroundsHeadingBackground.Fill = theme;
 
             coach = client.Cypher
             .Match("(p:Person)-[:COACHS]->(m:Team {name: '" + tblHeader.Text + "'})")
@@ -137,7 +143,7 @@ namespace SixNationsTracker
 
             var coachInfo = string.Join(",", coach.ToArray());
             var groundsInfo = string.Join(",", grounds.ToArray());
-            var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
+            var charsToRemove = new string[] { "{", "}", " ", ",", "\"" };
 
             foreach (var c in charsToRemove)
             {
@@ -166,7 +172,7 @@ namespace SixNationsTracker
                     .Return<string>("properties(p)").Results;
 
             var singleString = string.Join(",",info.ToArray());
-            var charsToRemove = new string[] { "{", "}", " ", ",", "name", "position", "caps", "points", ":", "\"" };
+            var charsToRemove = new string[] { "{", "}", " ", ",", "\"" };
 
             foreach(var c in charsToRemove)
             {

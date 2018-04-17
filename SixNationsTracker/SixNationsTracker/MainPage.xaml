@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid x:Name = "rootGrid" Background="White">
-        <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="MediumPurple" Stroke="Black" StrokeThickness="0.4"/>
-        <TextBlock x:Name="tblHeader" Text="S I X  N A T I O N S" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
+        <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="#41145e" Stroke="Black" StrokeThickness="0.4"/>
+        <TextBlock x:Name="tblHeader" Text="Six Nations" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
 
         <Viewbox x:Name="vbMain" Stretch="Uniform" HorizontalAlignment="Center" Margin="20, 70, 20, 20">
             <Grid Height="200" Width="400">
@@ -84,7 +84,7 @@
                 </Rectangle>
                 <TextBlock x:Name="tb6" Grid.Row="2" Grid.Column="5" Tapped="tb6_Tapped" />
 
-                <Rectangle x:Name="rect7Background" StrokeThickness="0.4" Stroke="Black" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Fill="MediumPurple" RadiusX="4" RadiusY="4"/>
+                <Rectangle x:Name="rect7Background" StrokeThickness="0.4" Stroke="Black" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Fill="#41145e" RadiusX="4" RadiusY="4"/>
                 <TextBlock x:Name="tb7" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Text="2018 FIXTURES" FontSize="8" TextAlignment="Center" Padding="0, 1, 0, 0" Tapped="tb7_Tapped" />
             </Grid>
         </Viewbox>
