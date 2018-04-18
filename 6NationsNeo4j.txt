@@ -1,6 +1,6 @@
 CREATE (Ireland:Team {name:'Ireland', coach:'Joe Schmidt', captain:'Rory Best'})
 
-CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10, position:'Center'})
+CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10, position:'Centre'})
 CREATE (RBest:Person {name:'Rory Best', caps:60, points:20, position:'Hooker'})
 CREATE (JCarbery:Person {name:'Joey Carbery', caps:4, points:10, position:'Fly Half'})
 CREATE (JConan:Person {name:'Jack Conan', caps:2, points:0, position:'No. 8'})
@@ -8,12 +8,12 @@ CREATE (AConway:Person {name:'Andrew Conway', caps:1, points:0, position:'Winger
 CREATE (JCronin:Person {name:'James Cronin', caps:2, points:0, position:'Prop'})
 CREATE (SCronin:Person {name:'Sean Cronin', caps:30, points:15, position:'Hooker'})
 CREATE (UDillane:Person {name:'Ultan Dillane', caps:5, points:0, position:'Lock'})
-CREATE (KEarls:Person {name:'Keith Earls', caps:33, points:45, position:'Center'})
-CREATE (CFarrell:Person {name:'Chris Farrell', caps:1, points:0, position:'Center'})
+CREATE (KEarls:Person {name:'Keith Earls', caps:33, points:45, position:'Centre'})
+CREATE (CFarrell:Person {name:'Chris Farrell', caps:1, points:0, position:'Centre'})
 CREATE (TFurlong:Person {name:'Tadhg Furlong', caps:11, points:0, position:'Prop'})
 CREATE (CHealy:Person {name:'Cian Healy', caps:40, points:15, position:'Prop'})
 CREATE (IHenderson:Person {name:'Iain Henderson', caps:20, points:10, position:'Lock'})
-CREATE (RHenshaw:Person {name:'Robbie Henshaw', caps:17, points:15, position:'Center'})
+CREATE (RHenshaw:Person {name:'Robbie Henshaw', caps:17, points:15, position:'Centre'})
 CREATE (RHerring:Person {name:'Rob Herring', caps:0, points:0, position:'Hooker'})
 CREATE (RKearney:Person {name:'Rob Kearney', caps:45, points:22, position:'Full Back'})
 CREATE (IKeatley:Person {name:'Ian Keatley', caps:2, points:14, position:'Fly Half'})
@@ -21,18 +21,18 @@ CREATE (DKilcoyne:Person {name:'Dave Kilcoyne', caps:4, points:0, position:'Prop
 CREATE (JLarmour:Person {name:'Jordan Larmour', caps:3, points:0, position:'Winger'})
 CREATE (DLeavy:Person {name:'Dan Leavy', caps:6, points:5, position:'Back Row'})
 CREATE (KMarmion:Person {name:'Kieran Marmion', caps:8, points:0, position:'Scrum Half'})
-CREATE (FMcFadden:Person {name:'Fergus McFadden', caps:18, points:20, position:'Center'})
+CREATE (FMcFadden:Person {name:'Fergus McFadden', caps:18, points:20, position:'Centre'})
 CREATE (JMcGrath:Person {name:'Jack McGrath', caps:25, points:10, position:'Prop'})
 CREATE (LMcGrath:Person {name:'Luke McGrath', caps:1, points:0, position:'Scrum Half'})
 CREATE (JMurphy:Person {name:'Jordi Murphy', caps:9, points:0, position:'Back Row'})
 CREATE (CMurray:Person {name:'Conor Murray', caps:32, points:41, position:'Scrum Half'})
 CREATE (POmahony:Person {name:'Peter OMahony', caps:26, points:0, position:'Flanker'})
 CREATE (APorter:Person {name:'Andrew Porter', caps:4, points:0, position:'Prop'})
-CREATE (GRingrose:Person {name:'Garry Ringrose', caps:7, points:10, position:'Center'})
+CREATE (GRingrose:Person {name:'Garry Ringrose', caps:7, points:10, position:'Centre'})
 CREATE (QRoux:Person {name:'Quinn Roux', caps:2, points:0, position:'Lock'})
 CREATE (JRyan1:Person {name:'James Ryan', caps:4, points:0, position:'Lock'})
 CREATE (JRyan2:Person {name:'John Ryan', caps:7, points:0, position:'Prop'})
-CREATE (RScannell:Person {name:'Rory Scannell', caps:0, points:0, position:'Center'})
+CREATE (RScannell:Person {name:'Rory Scannell', caps:0, points:0, position:'Centre'})
 CREATE (JSexton:Person {name:'Johnny Sexton', caps:38, points:357, position:'Fly Half'})
 CREATE (CJStander:Person {name:'CJ Stander', caps:15, points:30, position:'Back Row'})
 CREATE (JStockdale:Person {name:'Jacob Stockdale', caps:5, points:35, position:'Utility Back'})
@@ -551,3 +551,51 @@ CREATE
   (TWilliams)-[:PLAYS_FOR]->(Wales),
   (WGatland)-[:COACHS]->(Wales),
   (Principality)-[:GROUNDS_OF]->(Wales)
+
+CREATE (WalVSco:Match{round:1, home:34, away:7})
+CREATE (FraVIre:Match{round:1, home:13, away:15})
+CREATE (ItaVEng:Match{round:1, home:15, away:46})
+CREATE (IreVIta:Match{round:2, home:56, away:19})
+CREATE (EngVWal:Match{round:2, home:12, away:6})
+CREATE (ScoVFra:Match{round:2, home:32, away:26})
+CREATE (FraVIta:Match{round:3, home:34, away:17})
+CREATE (IreVWal:Match{round:3, home:37, away:27})
+CREATE (ScoVEng:Match{round:3, home:25, away:13})
+CREATE (IreVSco:Match{round:4, home:28, away:8})
+CREATE (FraVEng:Match{round:4, home:22, away:16})
+CREATE (WalVIta:Match{round:4, home:38, away:14})
+CREATE (ItaVSco:Match{round:5, home:27, away:29})
+CREATE (EngVIre:Match{round:5, home:15, away:24})
+CREATE (WalVFra:Match{round:5, home:14, away:13})
+CREATE
+	(Wales)-[:PLAY_AGAINST]->(WalVSco),
+	(France)-[:PLAY_AGAINST]->(FraVIre),
+	(Italy)-[:PLAY_AGAINST]->(ItaVEng),
+	(Ireland)-[:PLAY_AGAINST]->(IreVIta),
+	(England)-[:PLAY_AGAINST]->(EngVWal),
+	(Scotland)-[:PLAY_AGAINST]->(ScoVFra),
+	(France)-[:PLAY_AGAINST]->(FraVIta),
+	(Ireland)-[:PLAY_AGAINST]->(IreVWal),
+	(Scotland)-[:PLAY_AGAINST]->(ScoVEng),
+	(Ireland)-[:PLAY_AGAINST]->(IreVSco),
+	(France)-[:PLAY_AGAINST]->(FraVEng),
+	(Wales)-[:PLAY_AGAINST]->(WalVIta),
+	(Italy)-[:PLAY_AGAINST]->(ItaVSco),
+	(England)-[:PLAY_AGAINST]->(EngVIre),
+	(Wales)-[:PLAY_AGAINST]->(WalVFra)
+CREATE
+	(Scotland)-[:PLAY_AGAINST]->(WalVSco),
+	(Ireland)-[:PLAY_AGAINST]->(FraVIre),
+	(England)-[:PLAY_AGAINST]->(ItaVEng),
+	(Italy)-[:PLAY_AGAINST]->(IreVIta),
+	(Wales)-[:PLAY_AGAINST]->(EngVWal),
+	(France)-[:PLAY_AGAINST]->(ScoVFra),
+	(Italy)-[:PLAY_AGAINST]->(FraVIta),
+	(Wales)-[:PLAY_AGAINST]->(IreVWal),
+	(England)-[:PLAY_AGAINST]->(ScoVEng),
+	(Scotland)-[:PLAY_AGAINST]->(IreVSco),
+	(England)-[:PLAY_AGAINST]->(FraVEng),
+	(Italy)-[:PLAY_AGAINST]->(WalVIta),
+	(Scotland)-[:PLAY_AGAINST]->(ItaVSco),
+	(Ireland)-[:PLAY_AGAINST]->(EngVIre),
+	(France)-[:PLAY_AGAINST]->(WalVFra)
