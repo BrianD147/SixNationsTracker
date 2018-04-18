@@ -31,8 +31,8 @@
                 </Grid.ColumnDefinitions>
                 
                 <!-- Ireland Logo-->
-                <Rectangle x:Name="rect1Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="1" Fill="#006946" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect1Image" Grid.Row="0" Grid.Column="1" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect1Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="1" Fill="#006946" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect1Image" Grid.Row="0" Grid.Column="1" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/IrelandLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -40,8 +40,8 @@
                 <TextBlock x:Name="tb1" Grid.Row="0" Grid.Column="1" Tapped="tb1_Tapped" />
 
                 <!-- Scotland Logo-->
-                <Rectangle x:Name="rect2Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="3" Fill="#044d85" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect2Image" Grid.Row="0" Grid.Column="3" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect2Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="3" Fill="#044d85" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect2Image" Grid.Row="0" Grid.Column="3" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/ScotlandLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -49,8 +49,8 @@
                 <TextBlock x:Name="tb2" Grid.Row="0" Grid.Column="3" Tapped="tb2_Tapped" />
 
                 <!-- England Logo-->
-                <Rectangle x:Name="rect3Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="5" Fill="White" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect3Image" Grid.Row="0" Grid.Column="5" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect3Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.Column="5" Fill="White" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect3Image" Grid.Row="0" Grid.Column="5" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/EnglandLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -58,8 +58,8 @@
                 <TextBlock x:Name="tb3" Grid.Row="0" Grid.Column="5" Tapped="tb3_Tapped" />
 
                 <!-- France Logo-->
-                <Rectangle x:Name="rect4Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="1" Fill="#004786" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect4Image" Grid.Row="2" Grid.Column="1" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect4Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="1" Fill="#004786" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect4Image" Grid.Row="2" Grid.Column="1" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/FranceLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -67,8 +67,8 @@
                 <TextBlock x:Name="tb4" Grid.Row="2" Grid.Column="1" Tapped="tb4_Tapped" />
 
                 <!-- Wales Logo-->
-                <Rectangle x:Name="rect5Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="3" Fill="#ee2922" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect5Image" Grid.Row="2" Grid.Column="3" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect5Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="3" Fill="#ee2922" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect5Image" Grid.Row="2" Grid.Column="3" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/WalesLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -76,8 +76,8 @@
                 <TextBlock x:Name="tb5" Grid.Row="2" Grid.Column="3" Tapped="tb5_Tapped" />
 
                 <!-- Italy Logo-->
-                <Rectangle x:Name="rect6Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="5" Fill="#1f4fa2" RadiusX="10" RadiusY="10"/>
-                <Rectangle x:Name="rect6Image" Grid.Row="2" Grid.Column="5" Margin="5, 5, 5, 5">
+                <Rectangle x:Name="rect6Background" Stroke="Black" StrokeThickness="0.4" Grid.Row="2" Grid.Column="5" Fill="#1f4fa2" RadiusX="10" RadiusY="10" Stretch="Uniform" Margin="7.5, 0, 0, 0"/>
+                <Rectangle x:Name="rect6Image" Grid.Row="2" Grid.Column="5" Margin="12.5, 5, 12.5, 5" Stretch="Uniform">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Images/ItalyLogo.png" Stretch="Uniform"/>
                     </Rectangle.Fill>

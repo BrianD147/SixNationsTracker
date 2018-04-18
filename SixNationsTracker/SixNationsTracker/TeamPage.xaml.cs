@@ -130,8 +130,6 @@ namespace SixNationsTracker
             rectTop.Fill = theme;
             rectDivide1.Fill = theme;
             rectDivide2.Fill = theme;
-            rectCoachHeadingBackground.Fill = theme;
-            rectGroundsHeadingBackground.Fill = theme;
 
             coach = client.Cypher
             .Match("(p:Person)-[:COACHS]->(m:Team {name: '" + tblHeader.Text + "'})")
@@ -143,12 +141,34 @@ namespace SixNationsTracker
 
             var coachInfo = string.Join(",", coach.ToArray());
             var groundsInfo = string.Join(",", grounds.ToArray());
-            var charsToRemove = new string[] { "{", "}", " ", ",", "\"" };
+            var charsToRemove = new string[] { "{", "}", ",", "\"" };
+            var wordsToReplace = new string[] { "years_coached", "name", "opened", "capacity" };
 
             foreach (var c in charsToRemove)
             {
                 coachInfo = coachInfo.Replace(c, string.Empty);
                 groundsInfo = groundsInfo.Replace(c, string.Empty);
+            }
+
+            foreach (var c in wordsToReplace)
+            {
+                switch (c)
+                {
+                    case "years_coached":
+                        coachInfo = coachInfo.Replace(c, Environment.NewLine + "Years Coached");
+                        break;
+                    case "name":
+                        coachInfo = coachInfo.Replace(c, "Name");
+                        groundsInfo = groundsInfo.Replace(c, "Name");
+                        break;
+                    case "opened":
+                        groundsInfo = groundsInfo.Replace(c, Environment.NewLine + "Year Opened");
+                        break;
+                    case "capacity":
+                        groundsInfo = groundsInfo.Replace(c, Environment.NewLine + "Capacity");
+                        break;
+                }
+                
             }
 
             tbCoach.Text = coachInfo;
@@ -171,15 +191,36 @@ namespace SixNationsTracker
                     .Match("(p:Person) WHERE p.name = '" + name + "'")
                     .Return<string>("properties(p)").Results;
 
-            var singleString = string.Join(",",info.ToArray());
-            var charsToRemove = new string[] { "{", "}", " ", ",", "\"" };
+            var playerInfo = string.Join(",",info.ToArray());
+            var charsToRemove = new string[] { "{", "}", ",", "\"" };
+            var wordsToReplace = new string[] { "name", "caps", "points", "position" };
 
-            foreach(var c in charsToRemove)
+            foreach (var c in charsToRemove)
             {
-                singleString = singleString.Replace(c, string.Empty);
+                playerInfo = playerInfo.Replace(c, string.Empty);
             }
 
-            tbPlayerInfo.Text = singleString;
+            foreach (var c in wordsToReplace)
+            {
+                switch (c)
+                {
+                    case "name":
+                        playerInfo = playerInfo.Replace(c, "Name");
+                        break;
+                    case "caps":
+                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Caps");
+                        break;
+                    case "points":
+                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Points");
+                        break;
+                    case "position":
+                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Position");
+                        break;
+                }
+
+            }
+
+            tbPlayerInfo.Text = playerInfo;
         }
     }
 }
