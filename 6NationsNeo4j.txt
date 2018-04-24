@@ -1,4 +1,4 @@
-CREATE (Ireland:Team {name:'Ireland', coach:'Joe Schmidt', captain:'Rory Best'})
+CREATE (Ireland:Team {name:'Ireland', coach:'Joe Schmidt', captain:'Rory Best', totalPoints:160, penaltiesConceded:34, penaltiesWon:7, triesScored:20, lineoutsWon:67, lineoutsLost:5, mostPasses:1038, metresGained:2241, redCards:0, yellowCards:1, mostTackles:663})
 
 CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10, position:'Centre'})
 CREATE (RBest:Person {name:'Rory Best', caps:60, points:20, position:'Hooker'})
@@ -84,7 +84,7 @@ CREATE
   (Aviva)-[:GROUNDS_OF]->(Ireland)
   
   
-CREATE (France:Team {name:'France', coach:'Jacques Brunel', captain:'Guilhem Guirado'})
+CREATE (France:Team {name:'France', coach:'Jacques Brunel', captain:'Guilhem Guirado', totalPoints:106, penaltiesConceded:49, penaltiesWon:17, triesScored:8, lineoutsWon:46, lineoutsLost:10, mostPasses:777, metresGained:1962, redCards:0, yellowCards:0, mostTackles:794})
 
 CREATE (MBabillot:Person {name:'Mathieu Babillot', caps:1, points:0, position:'Back Row'})
 CREATE (MBastareaud:Person {name:'Mathieu Bastareaud', caps:26, points:20, position:'Centre'})
@@ -188,7 +188,7 @@ CREATE
 	(Stade)-[:GROUNDS_OF]->(France)
 	
 	
-CREATE (Scotland:Team {name:'Scotland', coach:'Gregor Townsend', captain:'Barclay Watson'})
+CREATE (Scotland:Team {name:'Scotland', coach:'Gregor Townsend', captain:'Barclay Watson', totalPoints:101, penaltiesConceded:40, penaltiesWon:10, triesScored:11, lineoutsWon:54, lineoutsLost:12, mostPasses:907, metresGained:2014, redCards:0, yellowCards:0, mostTackles:787})
 
 CREATE (JBarclay:Person {name:'John Barclay', caps:36, points:15, position:'Back Row'})
 CREATE (MBennet:Person {name:'Mark Bennet', caps:11, points:10, position:'Centre'})
@@ -287,7 +287,7 @@ CREATE
 	(Murrayfield)-[:GROUNDS_OF]->(Scotland)
  
  
-CREATE (Italy:Team {name:'Italy', coach:'Conor OShea', captain:'Sergio Parisse'})
+CREATE (Italy:Team {name:'Italy', coach:'Conor OShea', captain:'Sergio Parisse', totalPoints:90, penaltiesConceded:58, penaltiesWon:4, triesScored:12, lineoutsWon:55, lineoutsLost:6, mostPasses:774, metresGained:1778, redCards:0, yellowCards:2, mostTackles:869})
 
 CREATE (TAllan:Person {name:'Tommaso Allan', caps:18, points:71, position:'Fly Half'})
 CREATE (MBellini:Person {name:'Mattia Bellini', caps:10, points:10, position:'Centre'})
@@ -367,7 +367,7 @@ CREATE
   (Olimpico)-[:GROUNDS_OF]->(Italy)
 
   
-CREATE (England:Team {name:'England', coach:'Eddie Jones', captain:'Dylan Hartley'})
+CREATE (England:Team {name:'England', coach:'Eddie Jones', captain:'Dylan Hartley', totalPoints:102, penaltiesConceded:58, penaltiesWon:6, triesScored:14, lineoutsWon:59, lineoutsLost:5, mostPasses:980, metresGained:2070, redCards:0, yellowCards:2, mostTackles:778})
 
 CREATE (DArmond:Person {name:'Don Armand', caps:1, points:0, position:'Back Row'})
 CREATE (LBoyce:Person {name:'Lewis Boyce', caps:0, points:0, position:'Prop'})
@@ -463,7 +463,7 @@ CREATE
   (Twickenham)-[:GROUNDS_OF]->(England)
   
   
-CREATE (Wales:Team {name:'Wales', coach:'Warren Gatland', captain:'Alun Wyn Jones'})
+CREATE (Wales:Team {name:'Wales', coach:'Warren Gatland', captain:'Alun Wyn Jones', totalPoints:119, penaltiesConceded:42, penaltiesWon:10, triesScored:13, lineoutsWon:53, lineoutsLost:2, mostPasses:832, metresGained:2188, redCards:0, yellowCards:2, mostTackles:825})
   
 CREATE (JAdams:Person {name:'Josh Adams', caps:2, points:0, position:'Winger'})
 CREATE (HAmos:Person {name:'Hallam Amos', caps:1, points:0, position:'Winger'})
