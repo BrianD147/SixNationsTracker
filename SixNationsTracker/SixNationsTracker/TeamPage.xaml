@@ -44,11 +44,11 @@
                 <Rectangle x:Name="rectDivide1" Grid.Row="0" Grid.Column="1" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
                 <Rectangle x:Name="rectDivide2" Grid.Row="0" Grid.Column="3" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
 
-                <TextBlock x:Name="tbCoachHeader" Grid.Column="0" Grid.Row="2" FontSize="6" Text="Coach" TextAlignment="Center" FontWeight="Bold"/>
-                <TextBlock x:Name="tbCoach" Grid.Column="0" Grid.Row="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbCoachHeader" Grid.Column="4" Grid.Row="0" FontSize="6" Text="Coach" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="tbCoach" Grid.Column="4" Grid.Row="1" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
 
-                <TextBlock x:Name="tbGroundsHeader" Grid.Column="0" Grid.Row="4" FontSize="6" Text="Grounds" TextAlignment="Center" FontWeight="Bold"/>
-                <TextBlock x:Name="tbGrounds" Grid.Column="0" Grid.Row="5" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbGroundsHeader" Grid.Column="4" Grid.Row="2" FontSize="6" Text="Grounds" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="tbGrounds" Grid.Column="4" Grid.Row="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
 
                 <TextBlock x:Name="tbPlayersHeader" Grid.Column="2" Grid.Row="0" FontSize="6" Text="Players" TextAlignment="Center" FontWeight="Bold"/>
                 <ListView x:Name="lvPlayers" Grid.Column="2" Grid.Row="1" Grid.RowSpan="5" Tapped="lvPlayers_Tapped" >
@@ -61,10 +61,10 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
-                <TextBlock x:Name="tbPlayerImageHeader" Grid.Column="4" Grid.Row="0" FontSize="6" Text="Player Image" TextAlignment="Center" FontWeight="Bold"/>
-                <Rectangle x:Name="rectPlayerIageBackground" Stroke="Black" StrokeThickness="0.4" Grid.Row="1" Grid.Column="4" Margin="35,2.5,0,2.5" Fill="LightGray" RadiusX="10" RadiusY="10" Stretch="Uniform"/>
-                <TextBlock x:Name="tbPlayerInfoHeader" Grid.Column="4" Grid.Row="2" FontSize="6" Text="Player Info" TextAlignment="Center" FontWeight="Bold"/>
-                <TextBlock x:Name="tbPlayerInfo" Grid.Column="4" Grid.Row="3" Grid.RowSpan="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbTeamStatsHeader" Grid.Column="0" Grid.Row="2" FontSize="6" Text="Team Stats 2016/2017" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="tbTeamStats" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbPlayerInfoHeader" Grid.Column="4" Grid.Row="4" FontSize="6" Text="Selected Player Info" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="tbPlayerInfo" Grid.Column="4" Grid.Row="5" Grid.RowSpan="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
             </Grid>
         </Viewbox>
     </Grid>

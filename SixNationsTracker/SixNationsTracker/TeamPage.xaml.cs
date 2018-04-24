@@ -38,6 +38,7 @@ namespace SixNationsTracker
             IEnumerable<string> players;
             IEnumerable<string> coach;
             IEnumerable<string> grounds;
+            IEnumerable<string> team = null;
 
             ImageBrush logo = new ImageBrush();
             SolidColorBrush theme = new SolidColorBrush();
@@ -51,6 +52,11 @@ namespace SixNationsTracker
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
 
+                    team = client.Cypher
+                    .Match("(t:Team)")
+                    .Where("t.name = 'Ireland'")
+                    .Return<string>("properties(t)").Results;
+
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/IrelandLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
 
@@ -63,6 +69,11 @@ namespace SixNationsTracker
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Scotland'})")
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
+
+                    team = client.Cypher
+                     .Match("(t:Team)")
+                     .Where("t.name = 'Scotland'")
+                     .Return<string>("properties(t)").Results;
 
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/ScotlandLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
@@ -78,6 +89,11 @@ namespace SixNationsTracker
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
 
+                    team = client.Cypher
+                    .Match("(t:Team)")
+                    .Where("t.name = 'England'")
+                    .Return<string>("properties(t)").Results;
+
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/EnglandLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
 
@@ -90,6 +106,11 @@ namespace SixNationsTracker
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'France'})")
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
+
+                    team = client.Cypher
+                    .Match("(t:Team)")
+                    .Where("t.name = 'France'")
+                    .Return<string>("properties(t)").Results;
 
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/FranceLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
@@ -104,6 +125,11 @@ namespace SixNationsTracker
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
 
+                    team = client.Cypher
+                    .Match("(t:Team)")
+                    .Where("t.name = 'Wales'")
+                    .Return<string>("properties(t)").Results;
+
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/WalesLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
 
@@ -116,6 +142,11 @@ namespace SixNationsTracker
                     .Match("(p:Person)-[:PLAYS_FOR]->(m:Team {name: 'Italy'})")
                     .Return<string>("p.name").Results;
                     lvPlayers.ItemsSource = players;
+
+                    team = client.Cypher
+                    .Match("(t:Team)")
+                    .Where("t.name = 'Italy'")
+                    .Return<string>("properties(t)").Results;
 
                     logo.ImageSource = new BitmapImage(new Uri("ms-appx:///Images/ItalyLogo.png", UriKind.RelativeOrAbsolute));
                     rectLogo.Fill = logo;
@@ -141,13 +172,16 @@ namespace SixNationsTracker
 
             var coachInfo = string.Join(",", coach.ToArray());
             var groundsInfo = string.Join(",", grounds.ToArray());
+            var teamStats = string.Join(",", team.ToArray());
             var charsToRemove = new string[] { "{", "}", ",", "\"" };
-            var wordsToReplace = new string[] { "years_coached", "name", "opened", "capacity" };
+            var wordsToReplace = new string[] { "years_coached", "name", "opened", "capacity", "captain", "lineoutsLost", "redCards", "metresGained"
+            , "lineoutsWon", "penaltiesConceded", "mostTackles", "triesScored", "totalPoints", "mostPasses", "penaltiesWon" , "yellowCards" };
 
             foreach (var c in charsToRemove)
             {
                 coachInfo = coachInfo.Replace(c, string.Empty);
                 groundsInfo = groundsInfo.Replace(c, string.Empty);
+                teamStats = teamStats.Replace(c, string.Empty);
             }
 
             foreach (var c in wordsToReplace)
@@ -155,17 +189,53 @@ namespace SixNationsTracker
                 switch (c)
                 {
                     case "years_coached":
-                        coachInfo = coachInfo.Replace(c, Environment.NewLine + "Years Coached");
+                        coachInfo = coachInfo.Replace(c, "Years Coached");
                         break;
                     case "name":
                         coachInfo = coachInfo.Replace(c, "Name");
                         groundsInfo = groundsInfo.Replace(c, "Name");
                         break;
                     case "opened":
-                        groundsInfo = groundsInfo.Replace(c, Environment.NewLine + "Year Opened");
+                        groundsInfo = groundsInfo.Replace(c, "Year Opened");
                         break;
                     case "capacity":
-                        groundsInfo = groundsInfo.Replace(c, Environment.NewLine + "Capacity");
+                        groundsInfo = groundsInfo.Replace(c, "Capacity");
+                        break;
+                    case "captain":
+                        teamStats = teamStats.Replace(c, "Captain");
+                        break;
+                    case "lineoutsLost":
+                        teamStats = teamStats.Replace(c, "Lineouts Lost");
+                        break;
+                    case "redCards":
+                        teamStats = teamStats.Replace(c, "Red Cards");
+                        break;
+                    case "metresGained":
+                        teamStats = teamStats.Replace(c, "Metres Gained");
+                        break;
+                    case "lineoutsWon":
+                        teamStats = teamStats.Replace(c, "Lineouts Won");
+                        break;
+                    case "penaltiesConceded":
+                        teamStats = teamStats.Replace(c, "Penalties Conceded");
+                        break;
+                    case "mostTackles":
+                        teamStats = teamStats.Replace(c, "Most Tackles");
+                        break;
+                    case "triesScored":
+                        teamStats = teamStats.Replace(c, "Tries Scored");
+                        break;
+                    case "totalPoints":
+                        teamStats = teamStats.Replace(c, "Total Points");
+                        break;
+                    case "mostPasses":
+                        teamStats = teamStats.Replace(c, "Most Passes");
+                        break;
+                    case "penaltiesWon":
+                        teamStats = teamStats.Replace(c, "Pentalties Won");
+                        break;
+                    case "yellowCards":
+                        teamStats = teamStats.Replace(c, "Yellow Cards");
                         break;
                 }
                 
@@ -173,6 +243,7 @@ namespace SixNationsTracker
 
             tbCoach.Text = coachInfo;
             tbGrounds.Text = groundsInfo;
+            tbTeamStats.Text = teamStats;
         }
 
         private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
@@ -208,13 +279,13 @@ namespace SixNationsTracker
                         playerInfo = playerInfo.Replace(c, "Name");
                         break;
                     case "caps":
-                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Caps");
+                        playerInfo = playerInfo.Replace(c, "Caps");
                         break;
                     case "points":
-                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Points");
+                        playerInfo = playerInfo.Replace(c, "Points");
                         break;
                     case "position":
-                        playerInfo = playerInfo.Replace(c, Environment.NewLine + "Position");
+                        playerInfo = playerInfo.Replace(c, "Position");
                         break;
                 }
 
