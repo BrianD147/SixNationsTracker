@@ -551,22 +551,21 @@ CREATE
   (TWilliams)-[:PLAYS_FOR]->(Wales),
   (WGatland)-[:COACHS]->(Wales),
   (Principality)-[:GROUNDS_OF]->(Wales)
-
-CREATE (WalVSco:Match{round:1, home:34, away:7})
-CREATE (FraVIre:Match{round:1, home:13, away:15})
-CREATE (ItaVEng:Match{round:1, home:15, away:46})
-CREATE (IreVIta:Match{round:2, home:56, away:19})
-CREATE (EngVWal:Match{round:2, home:12, away:6})
-CREATE (ScoVFra:Match{round:2, home:32, away:26})
-CREATE (FraVIta:Match{round:3, home:34, away:17})
-CREATE (IreVWal:Match{round:3, home:37, away:27})
-CREATE (ScoVEng:Match{round:3, home:25, away:13})
-CREATE (IreVSco:Match{round:4, home:28, away:8})
-CREATE (FraVEng:Match{round:4, home:22, away:16})
-CREATE (WalVIta:Match{round:4, home:38, away:14})
-CREATE (ItaVSco:Match{round:5, home:27, away:29})
-CREATE (EngVIre:Match{round:5, home:15, away:24})
-CREATE (WalVFra:Match{round:5, home:14, away:13})
+CREATE (WalVSco:Match{round:2018.1, home:34, away:7})
+CREATE (FraVIre:Match{round:2018.1, home:13, away:15})
+CREATE (ItaVEng:Match{round:2018.1, home:15, away:46})
+CREATE (IreVIta:Match{round:2018.2, home:56, away:19})
+CREATE (EngVWal:Match{round:2018.2, home:12, away:6})
+CREATE (ScoVFra:Match{round:2018.2, home:32, away:26})
+CREATE (FraVIta:Match{round:2018.3, home:34, away:17})
+CREATE (IreVWal:Match{round:2018.3, home:37, away:27})
+CREATE (ScoVEng:Match{round:2018.3, home:25, away:13})
+CREATE (IreVSco:Match{round:2018.4, home:28, away:8})
+CREATE (FraVEng:Match{round:2018.4, home:22, away:16})
+CREATE (WalVIta:Match{round:2018.4, home:38, away:14})
+CREATE (ItaVSco:Match{round:2018.5, home:27, away:29})
+CREATE (EngVIre:Match{round:2018.5, home:15, away:24})
+CREATE (WalVFra:Match{round:2018.5, home:14, away:13})
 CREATE
 	(Wales)-[:PLAY_AGAINST]->(WalVSco),
 	(France)-[:PLAY_AGAINST]->(FraVIre),
@@ -599,3 +598,66 @@ CREATE
 	(Scotland)-[:PLAY_AGAINST]->(ItaVSco),
 	(Ireland)-[:PLAY_AGAINST]->(EngVIre),
 	(France)-[:PLAY_AGAINST]->(WalVFra)
+CREATE (FraVWal:Match{round:2019.1, date:"01/02/2019"})
+CREATE (ScoVIta:Match{round:2019.1, date:"02/02/2019"})
+CREATE (IreVEng:Match{round:2019.1, date:"02/02/2019"})
+CREATE (ScoVIre:Match{round:2019.2, date:"09/02/2019"})
+CREATE (ItaVWal:Match{round:2019.2, date:"09/02/2019"})
+CREATE (EngVFra:Match{round:2019.2, date:"10/02/2019"})
+CREATE (FraVSco:Match{round:2019.3, date:"23/02/2019"})
+CREATE (WalVEng:Match{round:2019.3, date:"23/02/2019"})
+CREATE (ItaVIre:Match{round:2019.3, date:"24/02/2019"})
+CREATE (ScoVWal:Match{round:2019.4, date:"09/03/2019"})
+CREATE (EngVIta:Match{round:2019.4, date:"09/03/2019"})
+CREATE (IreVFra:Match{round:2019.4, date:"10/03/2019"})
+CREATE (ItaVFra:Match{round:2019.5, date:"16/03/2019"})
+CREATE (WalVIre:Match{round:2019.5, date:"16/03/2019"})
+CREATE (EngVSco:Match{round:2019.5, date:"16/03/2019"})
+CREATE 
+	(France)-[:PLAY_AGAINST]->(FraVWal),
+	(Scotland)-[:PLAY_AGAINST]->(ScoVIta),
+	(Ireland)-[:PLAY_AGAINST]->(IreVEng),
+	(Scotland)-[:PLAY_AGAINST]->(ScoVIre),
+	(Italy)-[:PLAY_AGAINST]->(ItaVWal),
+	(England)-[:PLAY_AGAINST]->(EngVFra),
+	(France)-[:PLAY_AGAINST]->(FraVSco),
+	(Wales)-[:PLAY_AGAINST]->(WalVEng),
+	(Italy)-[:PLAY_AGAINST]->(ItaVIre),
+	(Scotland)-[:PLAY_AGAINST]->(ScoVWal),
+	(England)-[:PLAY_AGAINST]->(EngVIta),
+	(Ireland)-[:PLAY_AGAINST]->(IreVFra),
+	(Italy)-[:PLAY_AGAINST]->(ItaVFra),
+	(Wales)-[:PLAY_AGAINST]->(WalVIre),
+	(England)-[:PLAY_AGAINST]->(EngVSco)
+CREATE
+	(Wales)-[:PLAY_AGAINST]->(FraVWal),
+	(Italy)-[:PLAY_AGAINST]->(ScoVIta),
+	(England)-[:PLAY_AGAINST]->(IreVEng),
+	(Ireland)-[:PLAY_AGAINST]->(ScoVIre),
+	(Wales)-[:PLAY_AGAINST]->(ItaVWal),
+	(France)-[:PLAY_AGAINST]->(EngVFra),
+	(Scotland)-[:PLAY_AGAINST]->(FraVSco),
+	(England)-[:PLAY_AGAINST]->(WalVEng),
+	(Ireland)-[:PLAY_AGAINST]->(ItaVIre),
+	(Wales)-[:PLAY_AGAINST]->(ScoVWal),
+	(Italy)-[:PLAY_AGAINST]->(EngVIta),
+	(France)-[:PLAY_AGAINST]->(IreVFra),
+	(France)-[:PLAY_AGAINST]->(ItaVFra),
+	(Ireland)-[:PLAY_AGAINST]->(WalVIre),
+	(Scotland)-[:PLAY_AGAINST]->(EngVSco)
+CREATE
+	(FraVWal)-[:PLAYED_IN]->(Stade),
+	(ScoVIta)-[:PLAYED_IN]->(Murrayfield),
+	(IreVEng)-[:PLAYED_IN]->(Aviva),
+	(ScoVIre)-[:PLAYED_IN]->(Murrayfield),
+	(ItaVWal)-[:PLAYED_IN]->(Olimpico),
+	(EngVFra)-[:PLAYED_IN]->(Twickenham),
+	(FraVSco)-[:PLAYED_IN]->(Stade),
+	(WalVEng)-[:PLAYED_IN]->(Principality),
+	(ItaVIre)-[:PLAYED_IN]->(Olimpico),
+	(ScoVWal)-[:PLAYED_IN]->(Murrayfield),
+	(EngVIta)-[:PLAYED_IN]->(Twickenham),
+	(IreVFra)-[:PLAYED_IN]->(Aviva),
+	(ItaVFra)-[:PLAYED_IN]->(Olimpico),
+	(WalVIre)-[:PLAYED_IN]->(Principality),
+	(EngVSco)-[:PLAYED_IN]->(Twickenham)
