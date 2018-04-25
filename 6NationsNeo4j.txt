@@ -1,4 +1,4 @@
-CREATE (Ireland:Team {captain:'Rory Best', totalPoints:160, penaltiesConceded:34, penaltiesWon:7, triesScored:20, lineoutsWon:67, lineoutsLost:5, mostPasses:1038, metresGained:2241, redCards:0, yellowCards:1, mostTackles:663})
+CREATE (Ireland:Team {name:'Ireland', captain:'Rory Best', totalPoints:160, penaltiesConceded:34, penaltiesWon:7, triesScored:20, lineoutsWon:67, lineoutsLost:5, mostPasses:1038, metresGained:2241, redCards:0, yellowCards:1, mostTackles:663})
 
 CREATE (BAki:Person {name:'Bundee Aki', caps:5, points:10, position:'Centre'})
 CREATE (RBest:Person {name:'Rory Best', caps:60, points:20, position:'Hooker'})
@@ -84,7 +84,7 @@ CREATE
   (Aviva)-[:GROUNDS_OF]->(Ireland)
   
   
-CREATE (France:Team {captain:'Guilhem Guirado', totalPoints:106, penaltiesConceded:49, penaltiesWon:17, triesScored:8, lineoutsWon:46, lineoutsLost:10, mostPasses:777, metresGained:1962, redCards:0, yellowCards:0, mostTackles:794})
+CREATE (France:Team {name:'France', captain:'Guilhem Guirado', totalPoints:106, penaltiesConceded:49, penaltiesWon:17, triesScored:8, lineoutsWon:46, lineoutsLost:10, mostPasses:777, metresGained:1962, redCards:0, yellowCards:0, mostTackles:794})
 
 CREATE (MBabillot:Person {name:'Mathieu Babillot', caps:1, points:0, position:'Back Row'})
 CREATE (MBastareaud:Person {name:'Mathieu Bastareaud', caps:26, points:20, position:'Centre'})
@@ -188,7 +188,7 @@ CREATE
 	(Stade)-[:GROUNDS_OF]->(France)
 	
 	
-CREATE (Scotland:Team {captain:'Barclay Watson', totalPoints:101, penaltiesConceded:40, penaltiesWon:10, triesScored:11, lineoutsWon:54, lineoutsLost:12, mostPasses:907, metresGained:2014, redCards:0, yellowCards:0, mostTackles:787})
+CREATE (Scotland:Team {name:'Scotland', captain:'Barclay Watson', totalPoints:101, penaltiesConceded:40, penaltiesWon:10, triesScored:11, lineoutsWon:54, lineoutsLost:12, mostPasses:907, metresGained:2014, redCards:0, yellowCards:0, mostTackles:787})
 
 CREATE (JBarclay:Person {name:'John Barclay', caps:36, points:15, position:'Back Row'})
 CREATE (MBennet:Person {name:'Mark Bennet', caps:11, points:10, position:'Centre'})
@@ -287,7 +287,7 @@ CREATE
 	(Murrayfield)-[:GROUNDS_OF]->(Scotland)
  
  
-CREATE (Italy:Team {captain:'Sergio Parisse', totalPoints:90, penaltiesConceded:58, penaltiesWon:4, triesScored:12, lineoutsWon:55, lineoutsLost:6, mostPasses:774, metresGained:1778, redCards:0, yellowCards:2, mostTackles:869})
+CREATE (Italy:Team {name:'Italy', captain:'Sergio Parisse', totalPoints:90, penaltiesConceded:58, penaltiesWon:4, triesScored:12, lineoutsWon:55, lineoutsLost:6, mostPasses:774, metresGained:1778, redCards:0, yellowCards:2, mostTackles:869})
 
 CREATE (TAllan:Person {name:'Tommaso Allan', caps:18, points:71, position:'Fly Half'})
 CREATE (MBellini:Person {name:'Mattia Bellini', caps:10, points:10, position:'Centre'})
@@ -367,7 +367,7 @@ CREATE
   (Olimpico)-[:GROUNDS_OF]->(Italy)
 
   
-CREATE (England:Team {captain:'Dylan Hartley', totalPoints:102, penaltiesConceded:58, penaltiesWon:6, triesScored:14, lineoutsWon:59, lineoutsLost:5, mostPasses:980, metresGained:2070, redCards:0, yellowCards:2, mostTackles:778})
+CREATE (England:Team {name:'England', captain:'Dylan Hartley', totalPoints:102, penaltiesConceded:58, penaltiesWon:6, triesScored:14, lineoutsWon:59, lineoutsLost:5, mostPasses:980, metresGained:2070, redCards:0, yellowCards:2, mostTackles:778})
 
 CREATE (DArmond:Person {name:'Don Armand', caps:1, points:0, position:'Back Row'})
 CREATE (LBoyce:Person {name:'Lewis Boyce', caps:0, points:0, position:'Prop'})
@@ -463,7 +463,7 @@ CREATE
   (Twickenham)-[:GROUNDS_OF]->(England)
   
   
-CREATE (Wales:Team {captain:'Alun Wyn Jones', totalPoints:119, penaltiesConceded:42, penaltiesWon:10, triesScored:13, lineoutsWon:53, lineoutsLost:2, mostPasses:832, metresGained:2188, redCards:0, yellowCards:2, mostTackles:825})
+CREATE (Wales:Team {name: 'Wales', captain:'Alun Wyn Jones', totalPoints:119, penaltiesConceded:42, penaltiesWon:10, triesScored:13, lineoutsWon:53, lineoutsLost:2, mostPasses:832, metresGained:2188, redCards:0, yellowCards:2, mostTackles:825})
   
 CREATE (JAdams:Person {name:'Josh Adams', caps:2, points:0, position:'Winger'})
 CREATE (HAmos:Person {name:'Hallam Amos', caps:1, points:0, position:'Winger'})
@@ -551,21 +551,21 @@ CREATE
   (TWilliams)-[:PLAYS_FOR]->(Wales),
   (WGatland)-[:COACHS]->(Wales),
   (Principality)-[:GROUNDS_OF]->(Wales)
-CREATE (WalVSco:Match{round:2018.1, home:34, away:7})
-CREATE (FraVIre:Match{round:2018.1, home:13, away:15})
-CREATE (ItaVEng:Match{round:2018.1, home:15, away:46})
-CREATE (IreVIta:Match{round:2018.2, home:56, away:19})
-CREATE (EngVWal:Match{round:2018.2, home:12, away:6})
-CREATE (ScoVFra:Match{round:2018.2, home:32, away:26})
-CREATE (FraVIta:Match{round:2018.3, home:34, away:17})
-CREATE (IreVWal:Match{round:2018.3, home:37, away:27})
-CREATE (ScoVEng:Match{round:2018.3, home:25, away:13})
-CREATE (IreVSco:Match{round:2018.4, home:28, away:8})
-CREATE (FraVEng:Match{round:2018.4, home:22, away:16})
-CREATE (WalVIta:Match{round:2018.4, home:38, away:14})
-CREATE (ItaVSco:Match{round:2018.5, home:27, away:29})
-CREATE (EngVIre:Match{round:2018.5, home:15, away:24})
-CREATE (WalVFra:Match{round:2018.5, home:14, away:13})
+CREATE (WalVSco:Match {name:"WalVSco", round:2018.1, home:34, away:7})
+CREATE (FraVIre:Match {name:"FraVIre", round:2018.1, home:13, away:15})
+CREATE (ItaVEng:Match {name:"ItaVEng", round:2018.1, home:15, away:46})
+CREATE (IreVIta:Match {name:"IreVIta", round:2018.2, home:56, away:19})
+CREATE (EngVWal:Match {name:"EngVWal", round:2018.2, home:12, away:6})
+CREATE (ScoVFra:Match {name:"ScoVFra", round:2018.2, home:32, away:26})
+CREATE (FraVIta:Match {name:"FraVIta", round:2018.3, home:34, away:17})
+CREATE (IreVWal:Match {name:"IreVWal", round:2018.3, home:37, away:27})
+CREATE (ScoVEng:Match {name:"ScoVEng", round:2018.3, home:25, away:13})
+CREATE (IreVSco:Match {name:"IreVSco", round:2018.4, home:28, away:8})
+CREATE (FraVEng:Match {name:"FraVEng", round:2018.4, home:22, away:16})
+CREATE (WalVIta:Match {name:"WalVIta", round:2018.4, home:38, away:14})
+CREATE (ItaVSco:Match {name:"ItaVSco", round:2018.5, home:27, away:29})
+CREATE (EngVIre:Match {name:"EngVIre", round:2018.5, home:15, away:24})
+CREATE (WalVFra:Match {name:"WalVFra", round:2018.5, home:14, away:13})
 CREATE
 	(Wales)-[:PLAY_AGAINST]->(WalVSco),
 	(France)-[:PLAY_AGAINST]->(FraVIre),
@@ -598,21 +598,21 @@ CREATE
 	(Scotland)-[:PLAY_AGAINST]->(ItaVSco),
 	(Ireland)-[:PLAY_AGAINST]->(EngVIre),
 	(France)-[:PLAY_AGAINST]->(WalVFra)
-CREATE (FraVWal:Match{round:2019.1, date:"01/02/2019"})
-CREATE (ScoVIta:Match{round:2019.1, date:"02/02/2019"})
-CREATE (IreVEng:Match{round:2019.1, date:"02/02/2019"})
-CREATE (ScoVIre:Match{round:2019.2, date:"09/02/2019"})
-CREATE (ItaVWal:Match{round:2019.2, date:"09/02/2019"})
-CREATE (EngVFra:Match{round:2019.2, date:"10/02/2019"})
-CREATE (FraVSco:Match{round:2019.3, date:"23/02/2019"})
-CREATE (WalVEng:Match{round:2019.3, date:"23/02/2019"})
-CREATE (ItaVIre:Match{round:2019.3, date:"24/02/2019"})
-CREATE (ScoVWal:Match{round:2019.4, date:"09/03/2019"})
-CREATE (EngVIta:Match{round:2019.4, date:"09/03/2019"})
-CREATE (IreVFra:Match{round:2019.4, date:"10/03/2019"})
-CREATE (ItaVFra:Match{round:2019.5, date:"16/03/2019"})
-CREATE (WalVIre:Match{round:2019.5, date:"16/03/2019"})
-CREATE (EngVSco:Match{round:2019.5, date:"16/03/2019"})
+CREATE (FraVWal:Match {name:"FraVWal", round:2019.1, date:"01/02/2019"})
+CREATE (ScoVIta:Match {name:"ScoVIta", round:2019.1, date:"02/02/2019"})
+CREATE (IreVEng:Match {name:"IreVEng", round:2019.1, date:"02/02/2019"})
+CREATE (ScoVIre:Match {name:"ScoVIre", round:2019.2, date:"09/02/2019"})
+CREATE (ItaVWal:Match {name:"ItaVWal", round:2019.2, date:"09/02/2019"})
+CREATE (EngVFra:Match {name:"EngVFra", round:2019.2, date:"10/02/2019"})
+CREATE (FraVSco:Match {name:"FraVSco", round:2019.3, date:"23/02/2019"})
+CREATE (WalVEng:Match {name:"WalVEng", round:2019.3, date:"23/02/2019"})
+CREATE (ItaVIre:Match {name:"ItaVIre", round:2019.3, date:"24/02/2019"})
+CREATE (ScoVWal:Match {name:"ScoVWal", round:2019.4, date:"09/03/2019"})
+CREATE (EngVIta:Match {name:"EngVIta", round:2019.4, date:"09/03/2019"})
+CREATE (IreVFra:Match {name:"IreVFra", round:2019.4, date:"10/03/2019"})
+CREATE (ItaVFra:Match {name:"ItaVFra", round:2019.5, date:"16/03/2019"})
+CREATE (WalVIre:Match {name:"WalVIre", round:2019.5, date:"16/03/2019"})
+CREATE (EngVSco:Match {name:"EngVSco", round:2019.5, date:"16/03/2019"})
 CREATE 
 	(France)-[:PLAY_AGAINST]->(FraVWal),
 	(Scotland)-[:PLAY_AGAINST]->(ScoVIta),

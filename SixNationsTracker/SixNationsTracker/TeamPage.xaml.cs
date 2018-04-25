@@ -194,6 +194,7 @@ namespace SixNationsTracker
                     case "name":
                         coachInfo = coachInfo.Replace(c, "Name");
                         groundsInfo = groundsInfo.Replace(c, "Name");
+                        teamStats = teamStats.Replace(c, "Name");
                         break;
                     case "opened":
                         groundsInfo = groundsInfo.Replace(c, "Year Opened");
