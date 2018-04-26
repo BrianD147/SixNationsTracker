@@ -31,5 +31,8 @@ You will have to change these to your own login details.
 
 ---
 
+Then simply run the program on Visual Studio through ' local machine '.
+
+
 [Neo4j]: https://neo4j.com/download/
 [Visual Studio]: https://www.visualstudio.com/vs/community/
