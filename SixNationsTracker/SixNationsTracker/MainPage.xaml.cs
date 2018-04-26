@@ -20,38 +20,58 @@ namespace SixNationsTracker
             this.InitializeComponent();
         }
 
+        //Ireland Button Tapped
         private void tb1_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 1);
         }
 
+        //Scotland Button Tapped
         private void tb2_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 2);
         }
 
+        //England Button Tapped
         private void tb3_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 3);
         }
 
+        //France Button Tapped
         private void tb4_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 4);
         }
 
+        //Wales Button Tapped
         private void tb5_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 5);
         }
 
+        //Italy Button Tapped
         private void tb6_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
+            //Added extra parameter to determine which page should be loaded
             Frame.Navigate(typeof(TeamPage), 6);
         }
 
+        //Fixtures Button Tapped
         private void tb7_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            //Navigates to fixtures page
             Frame.Navigate(typeof(FixturesPage));
         }
     }

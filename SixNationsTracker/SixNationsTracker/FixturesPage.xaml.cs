@@ -29,16 +29,24 @@ namespace SixNationsTracker
             this.InitializeComponent();
         }
 
+        //Function is loaded when FixturesPage is navigated to
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //Establish a connection to the database
             var client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "Rubydoy14");
             client.Connect();
 
+            //Variables
             IEnumerable<string> fixtures = null;
+            //Characters to remove and words to replace declared
+
             var charsToRemove = new string[] { "{", "}", ",", "\"", "[", "]" };
             var wordsToReplace = new string[] { "V", "home", "away", "date", "name:", "round: ", "2018.1", "2018.2", "2018.3", "2018.4", "2018.5", "2019.1", "2019.2", "2019.3", "2019.4", "2019.5" };
+
+            //Loop through 10 times for each fixture and result
             for (int i=1; i<=10; i++)
             {
+                //Call different data each time through the loop
                 switch (i)
                 {
                     case 1:
@@ -103,13 +111,16 @@ namespace SixNationsTracker
                         break;
                 }
 
+                //Whatever data was collected is put into a string
                 var fixturesInfo = string.Join(",", fixtures.ToArray());
 
+                //check every character in charsToRemove and remove them from all data
                 foreach (var c in charsToRemove)
                 {
                     fixturesInfo = fixturesInfo.Replace(c, string.Empty);
                 }
 
+                //check every word in wordsToReplace and in each case replace relevent data with new word formatting, or removing it entirely
                 foreach (var c in wordsToReplace)
                 {
                     switch (c)
@@ -165,6 +176,7 @@ namespace SixNationsTracker
                     }
                 }
 
+                //Apply data to relative element
                 switch (i)
                 {
                     case 1:
@@ -201,7 +213,8 @@ namespace SixNationsTracker
             }
         }
 
-            private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
+        //Function to navigate back to MainPage
+        private void tbReturn_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }

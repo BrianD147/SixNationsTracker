@@ -7,14 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <!-- Main Grid for all content -->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- Top Bar -->
         <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="MediumPurple"/>
         <TextBlock x:Name="tblHeader" Text="TEAM NAME" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
+        
+        <!-- Back Button -->
         <Rectangle x:Name="rectReturnBackground" Margin="5, 5, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Fill="Black" Opacity=".5" RadiusX="5" RadiusY="5" />
         <TextBlock x:Name="tbReturn" FontSize="28" Padding="20, 0, 0, 0" Margin="5, 4, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Foreground="White" Tapped="tbReturn_Tapped">
             &lt;
         </TextBlock>
-
+        
+        <!-- Main Grid holding all logos and button, allows for the page to be resized freely -->
         <Viewbox x:Name="vbMain" Stretch="Uniform" HorizontalAlignment="Center" Margin="20, 70, 20, 20">
             <Grid Height="200" Width="400">
                 <Grid.RowDefinitions>
@@ -33,6 +38,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
+                <!-- Team Logo -->
                 <Rectangle x:Name="rectLogoBackground" Stroke="Black" StrokeThickness="0.4" Grid.Row="0" Grid.RowSpan="2" Margin="30,0,0,0" Fill="LightGray" RadiusX="10" RadiusY="10" Stretch="Uniform" Grid.ColumnSpan="2"/>
                 <Rectangle x:Name="rectLogo" Grid.Row="0" Grid.RowSpan="2" Margin="35, 5, 35, 5" Stretch="Uniform">
                     <Rectangle.Fill>
@@ -40,16 +46,19 @@
                     </Rectangle.Fill>
                 </Rectangle>
 
-
+                <!-- Dividers -->
                 <Rectangle x:Name="rectDivide1" Grid.Row="0" Grid.Column="1" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
                 <Rectangle x:Name="rectDivide2" Grid.Row="0" Grid.Column="3" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
 
+                <!-- Coach header and data -->
                 <TextBlock x:Name="tbCoachHeader" Grid.Column="4" Grid.Row="0" FontSize="6" Text="Coach" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock x:Name="tbCoach" Grid.Column="4" Grid.Row="1" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
 
+                <!-- Grounds header and data -->
                 <TextBlock x:Name="tbGroundsHeader" Grid.Column="4" Grid.Row="2" FontSize="6" Text="Grounds" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock x:Name="tbGrounds" Grid.Column="4" Grid.Row="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
 
+                <!-- Players list header and names -->
                 <TextBlock x:Name="tbPlayersHeader" Grid.Column="2" Grid.Row="0" FontSize="6" Text="Players" TextAlignment="Center" FontWeight="Bold"/>
                 <ListView x:Name="lvPlayers" Grid.Column="2" Grid.Row="1" Grid.RowSpan="5" Tapped="lvPlayers_Tapped" >
                     <ListView.ItemTemplate>
@@ -61,8 +70,11 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
+                <!-- Team Statistics header and data -->
                 <TextBlock x:Name="tbTeamStatsHeader" Grid.Column="0" Grid.Row="2" FontSize="6" Text="Team Stats 2016/2017" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock x:Name="tbTeamStats" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
+                
+                <!-- Player Info header and data of selected player -->
                 <TextBlock x:Name="tbPlayerInfoHeader" Grid.Column="4" Grid.Row="4" FontSize="6" Text="Selected Player Info" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock x:Name="tbPlayerInfo" Grid.Column="4" Grid.Row="5" Grid.RowSpan="3" FontSize="6" Text="{Binding}" TextAlignment="Center"/>
             </Grid>
