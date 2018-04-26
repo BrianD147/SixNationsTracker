@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="MediumPurple"/>
-        <TextBlock x:Name="tblHeader" Text="Fixtures + Results" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
+        <Rectangle x:Name="rectTop" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Fill="#41145e"/>
+        <TextBlock x:Name="tblHeader" Text="Results + Fixtures" TextAlignment="Center" FontSize="32" Height="50" VerticalAlignment="Top" Margin="0, 0, 0, 0" Foreground="White"/>
         <Rectangle x:Name="rectReturnBackground" Margin="5, 5, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Fill="Black" Opacity=".5" RadiusX="5" RadiusY="5" />
         <TextBlock x:Name="tbReturn" FontSize="28" Padding="20, 0, 0, 0" Margin="5, 4, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="60" Foreground="White" Tapped="tbReturn_Tapped">
             &lt;
@@ -38,21 +38,27 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Rectangle x:Name="rectDivide2" Grid.Row="0" Grid.Column="5" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide1" Grid.Row="0" Grid.Column="1" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide2" Grid.Row="0" Grid.Column="3" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide3" Grid.Row="0" Grid.Column="5" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide4" Grid.Row="0" Grid.Column="7" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide5" Grid.Row="0" Grid.Column="9" Grid.RowSpan="8" Fill="LightGray" Margin="4, 0, 4, 0"/>
+                <Rectangle x:Name="rectDivide6" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Fill="LightGray" Margin="0, 3, 0, 3"/>
+                <Rectangle x:Name="rectDivide7" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="5" Fill="LightGray" Margin="0, 3, 0, 3"/>
 
                 <TextBlock x:Name="tb2017Header" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" FontSize="6" Text="2017 Results" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock x:Name="tb2018Header" Grid.Column="6" Grid.ColumnSpan="5" Grid.Row="0" FontSize="6" Text="2018 Fixtures" TextAlignment="Center" FontWeight="Bold"/>
 
-                <TextBlock x:Name="tbFixtures1" Grid.Column="0" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures2" Grid.Column="2" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures3" Grid.Column="4" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures4" Grid.Column="0" Grid.Row="3" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures5" Grid.Column="2" Grid.Row="3" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures6" Grid.Column="6" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures7" Grid.Column="8" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures8" Grid.Column="10" Grid.Row="1" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures9" Grid.Column="6" Grid.Row="3" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
-                <TextBlock x:Name="tbFixtures10" Grid.Column="8" Grid.Row="3" FontSize="3" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures1" Grid.Column="0" Grid.Row="1" FontSize="4" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures2" Grid.Column="2" Grid.Row="1" FontSize="4" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures3" Grid.Column="4" Grid.Row="1" FontSize="4" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures4" Grid.Column="0" Grid.Row="3" FontSize="4" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures5" Grid.Column="2" Grid.Row="3" FontSize="4" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures6" Grid.Column="6" Grid.Row="1" FontSize="5" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures7" Grid.Column="8" Grid.Row="1" FontSize="5" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures8" Grid.Column="10" Grid.Row="1" FontSize="5" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures9" Grid.Column="6" Grid.Row="3" FontSize="5" Text="{Binding}" TextAlignment="Center"/>
+                <TextBlock x:Name="tbFixtures10" Grid.Column="8" Grid.Row="3" FontSize="5" Text="{Binding}" TextAlignment="Center"/>
             </Grid>
         </Viewbox>
     </Grid>

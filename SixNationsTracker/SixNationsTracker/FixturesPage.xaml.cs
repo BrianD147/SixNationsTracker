@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -35,8 +36,7 @@ namespace SixNationsTracker
 
             IEnumerable<string> fixtures = null;
             var charsToRemove = new string[] { "{", "}", ",", "\"", "[", "]" };
-            var wordsToReplace = new string[] { "V", "home", "away", "name:", "round: ", "2018.1", "2018.2", "2018.3", "2018.4", "2018.5", "2019.1", "2019.2", "2019.3", "2019.4", "2019.5" };
-
+            var wordsToReplace = new string[] { "V", "home", "away", "date", "name:", "round: ", "2018.1", "2018.2", "2018.3", "2018.4", "2018.5", "2019.1", "2019.2", "2019.3", "2019.4", "2019.5" };
             for (int i=1; i<=10; i++)
             {
                 switch (i)
@@ -122,6 +122,9 @@ namespace SixNationsTracker
                             break;
                         case "V":
                             fixturesInfo = fixturesInfo.Replace(c, "  V  ");
+                            break;
+                        case "date":
+                            fixturesInfo = fixturesInfo.Replace(c, "Date");
                             break;
                         case "name:":
                             fixturesInfo = fixturesInfo.Replace(c, string.Empty);
